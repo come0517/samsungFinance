@@ -1,0 +1,51 @@
+.system-box {
+  width:120px; 
+  height:120px;
+}
+
+.Samsung-blue {
+  background-color:#286ef1;
+}
+.Increase-red {
+  background-color:#F50057;
+}
+.Alary_red-red {
+  background-color:#FF392A;
+}
+.Decrease_blue-red {
+  background-color:#286ef1;
+}
+
+.Title_font {
+  background-color:#212121;
+}
+.Body_font1 {
+  background-color:#616161;
+}
+.Body_font2 {
+  background-color:#888888;
+}
+.Body_font3 {
+  background-color:#BBBBBB;
+}
+
+.Line1 {
+  background-color:#CCCCCC;
+}
+.Line2 {
+  background-color:#DDDDDD;
+}
+.Line3 {
+  background-color:#EEEEEE;
+}
+
+.BG1 {
+  background-color:#F5F5F5;
+}
+.BG2 {
+  background-color:#F8F8F8;
+}
+.BG3 {
+  background-color:#FFFFFF;
+}
+

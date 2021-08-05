@@ -1,0 +1,27 @@
+/*
+  Color Inventory
+*/
+
+$solid-colors: (
+    "Samsung_blue": #286ef1,
+    "Increase_red": #F50057,
+    "Alary_red": #FF392A,
+    "Decrease_blue": #286ef1,
+
+    "Title_font": #212121,
+    "Body_font1": #616161,
+    "Body_font2": #888888,
+    "Body_font3": #BBBBBB,
+
+    "Line1": #CCCCCC,
+    "Line2": #DDDDDD,
+    "Line3": #EEEEEE,
+    "BG1": #F5F5F5,
+    "BG2": #F8F8F8,
+    "BG3": #FFFFFF,
+);
+
+$Samsung_blue: map-get($solid-colors, 'Samsung_blue') !default;
+$Increase_red: map-get($solid-colors, 'Increase_red') !default;
+$Alary_red: map-get($solid-colors, 'Alary_red') !default;
+$Decrease_blue: map-get($solid-colors, 'Decrease_blue') !default;
