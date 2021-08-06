@@ -4,19 +4,21 @@
       <v-col cols="12">
         <v-card>
           <div class="d-flex flex-no-wrap justify-space-between">
-            <div>
-              <v-card-title class="text-h6" v-text="fund.fundNm"></v-card-title>
+            <nuxt-link :to="'/fund/' + fund.fundCd">
+              <div>
+                <v-card-title class="text-h6" v-text="fund.fundNm"></v-card-title>
 
-              <v-card-subtitle v-text="fund.fundClassTypeName"></v-card-subtitle>
+                <v-card-subtitle v-text="fund.fundClassTypeName"></v-card-subtitle>
 
-              <v-spacer></v-spacer>
+                <v-spacer></v-spacer>
 
-              <v-card-subtitle v-text="fund.yield_3m"></v-card-subtitle>
-            </div>
+                <v-card-subtitle v-text="fund.yield_3m"></v-card-subtitle>
+              </div>
 
-            <!-- <v-avatar class="ma-3" size="125" tile>
+              <!-- <v-avatar class="ma-3" size="125" tile>
               <v-img :src="item.src"></v-img>
-            </v-avatar>-->
+              </v-avatar>-->
+            </nuxt-link>
           </div>
         </v-card>
       </v-col>
