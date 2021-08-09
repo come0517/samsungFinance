@@ -2,7 +2,7 @@
     HTML Reset
 */
 
-
+/*
 h1 {
     font-size: 18px;
     color: #212121;
@@ -26,7 +26,37 @@ h1 {
     line-height: 22px;
     font-weight: 700;
   }
-  
+  */
   section {
     min-height: 100vh;
   }
+  [class^='fs'] {color:#212121}
+  [class^='fs'][class*='-title'] {letter-spacing:-1px;}
+  [class^='fs'][class*='-h'],
+  [class^='fs'][class*='-title'] {font-weight:700;}
+  [class^='fs'][class*='-p'] {font-size:13px; font-weight:500; line-height:22px;}
+  .fs-title-1 {font-size:24px; line-height:32px;}
+  .fs-title-2 {font-size:20px; line-height:30px;}
+  .fs-h1 {font-size:18px; line-height:28px; letter-spacing:-.9px;}
+  .fs-h2 {font-size:16px; line-height:24px;}
+  .fs-h3 {font-size:14px; line-height:22px;}
+  .fs-p-emp {font-size:14px}
+  .fs-form {font-size:16px; line-height:24px; font-weight:500;}
+  .fs-cap {font-size:12px; line-height:20px; font-weight:500;}
+
+  .v-text-field {padding-top:0; margin-top:0;}
+  .v-text-field > .v-input__control > .v-input__slot > .v-text-field__slot {display:block;}
+  .v-input .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;}
+  .v-input .v-label.error--text {color:#616161 !important}
+  .v-text-field input {padding:8px 0 11px; font-size:16px; line-height:24px; font-weight:500; color:#000; max-height:43px;}
+  .v-text-field__details {min-height:18px;}
+  .v-messages__message {font-size:12px; line-height:18px; font-weight:500;}
+  .v-application .error--text {color:#ff392a !important}
+/*   .v-text-field > .v-input__control > .v-input__slot:after {border-bottom:1px solid #ddd; bottom:-1px;} */
+  .v-text-field > .v-input__control > .v-input__slot:after {border-width:1px 0 0 0}
+  .v-application--is-ltr .v-text-field .v-input__append-inner {margin:0; padding:0}
+  .v-input__icon--clear {width:16px; height:16px; background-color:#ddd; min-width:16px; position:absolute; right:0; bottom:15px}
+  .v-input__icon--clear .mdi-close::before,
+  .v-input__icon--clear .mdi-close::after {font-size:12px; color:#fff}
+  .v-text-field > .v-input__control > .v-input__slot:after {border-color:#212121; background-color:#212121;}
+  
