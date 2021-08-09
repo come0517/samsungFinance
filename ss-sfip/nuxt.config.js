@@ -81,6 +81,14 @@ export default {
 
   storybook: {
     // Options
-    addons: ['@storybook/addon-knobs', '@storybook/addon-viewport'],
+    port: 3003,
+    addons: [
+      '@storybook/addon-knobs', 
+      '@storybook/addon-viewport'
+    ],
+    decorators: [
+      // VApp decorator for Vuetify
+      `<v-app id='vuetify-storybook-decorator'><div><story/></div></v-app>`,
+    ],
   }
 }

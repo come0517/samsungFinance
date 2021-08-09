@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d61b7618-069b-4a8a-b360-1d3b376c84d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/components/Storybook/Link.stories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/components/Storybook/Link.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628230421233</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Octavia views,Storybook">
+      <created>1628476697883</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628476697883</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +110,7 @@
     <MESSAGE value="git" />
     <MESSAGE value="layout 수정" />
     <MESSAGE value="Octavia scss 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Octavia scss 추가" />
+    <MESSAGE value="Octavia views,Storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Octavia views,Storybook" />
   </component>
 </project>
