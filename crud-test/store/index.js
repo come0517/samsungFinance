@@ -37,6 +37,12 @@ export const actions = {
       commit('SET_FUNDS', response.data.data)
       console.log(response.data.data)
     })
+  },
+  getFundDetail({ commit }, fundCd) {
+    return requestApi.getFundDetail(fundCd).then(response => {
+      commit('SET_FUND_DETAIL', response.data.data)
+      console.log(response.data.data)
+    })
   }
 }
 
@@ -55,9 +61,13 @@ export const mutations = {
     state.books.splice(index, 1)
   },
   GET_BOOK(state, book) {
-    state.book = Object.assign({}, state.book, book)
+    // state.book = Object.assign({}, state.book, book)
+    state.book = { ...state.book, ...book }
   },
   SET_FUNDS(state, funds) {
     state.funds = funds
+  },
+  SET_FUND_DETAIL(state, fund) {
+    state.fund = fund
   }
 }

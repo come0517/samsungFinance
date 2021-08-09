@@ -26,11 +26,14 @@ export default {
     return apiService.put('/books/' + id, book)
   },
   getFunds() {
-    return apiService.post('http://10.0.0.119:8080/product/fund/list', {
+    return apiService.post('http://localhost:8080/product/fund/list', {
       nextVal: '',
       nextYN: '',
       orderVal: '',
       searchText: ''
     })
+  },
+  getFundDetail(fundCd) {
+    return apiService.get(`http://localhost:8080/product/fund/detail/${fundCd}`)
   }
 }
