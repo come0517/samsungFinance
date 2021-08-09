@@ -22,7 +22,7 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer class="bg-gray text-caption">
+    <v-footer class="bg-gray text-caption mb-10">
       <p>
         삼성증권에서 제공하는 투자 정보는 고객의 판단을 위한 단순 참고용일뿐, 
         투자 제안 및 권유∙종목 추천을 위해 작성된 것이 아닙니다.

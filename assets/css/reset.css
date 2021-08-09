@@ -28,7 +28,7 @@ h1 {
   }
   */
   section {
-    min-height: 100vh;
+    min-height: 90vh;
   }
   [class^='fs'] {color:#212121}
   [class^='fs'][class*='-title'] {letter-spacing:-1px;}
