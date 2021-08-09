@@ -42,7 +42,7 @@
           >
             <v-icon>mdi-close</v-icon>
           </v-btn>
-          <v-toolbar-title  >팝업 레이아웃</v-toolbar-title>
+          <v-toolbar-title>팝업 레이아웃</v-toolbar-title>
           <v-spacer></v-spacer>
           
         </v-toolbar>
@@ -64,23 +64,23 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-        
       </v-card>
+
       <v-footer :fixed=true :padless=true >
         <v-btn block tile color="primary" @click="dialog = false">확인</v-btn>
       </v-footer>
+
     </v-dialog>
 
     <h1 class="mt-10">Layouts - 팝업</h1>
     <v-divider class="mb-5"/>
 
-    <v-dialog
+
+    <v-bottom-sheet
       v-model="dialog1"
-      hide-overlay
-      fullscreen
-      transition="dialog-bottom-transition"
+      persistent
     >
-    <template v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ on, attrs }">
         <v-btn
           color=""
           dark
@@ -90,31 +90,22 @@
           Dimm Layer 레이아웃 열기 (Bottom)
         </v-btn>
       </template>
+      <v-sheet
+        class="text-center mb-5"
+        min-height="150px"
+      >
 
-      
-        <v-card>
-          <v-toolbar
-            
-            flat block tile
-            color=""
-          >
-            <v-btn
-              icon
-              @click="dialog1 = false"
-            >
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <v-toolbar-title>팝업 레이아웃</v-toolbar-title>
-            <v-spacer></v-spacer>
-            
-          </v-toolbar>
-          
-          
-        </v-card>
+        <div class="py-3">
+          <p class="fs-h1">인증번호 1회 오류 입니다.</p>
+        </div>
+      </v-sheet>
+
       <v-footer :fixed=true :padless=true >
-        <v-btn block tile color="primary" @click="dialog = false">확인</v-btn>
+        <v-btn block tile color="primary" @click="dialog1 = false">확인</v-btn>
       </v-footer>
-    </v-dialog>
+    
+    </v-bottom-sheet>
+    
   </section>
 </template>
 
