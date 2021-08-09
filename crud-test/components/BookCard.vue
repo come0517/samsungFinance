@@ -27,6 +27,8 @@
 <script>
 export default {
   name: 'BookCard',
+
+  // 상위컴포넌트인 index.vue에서 받은 book 데이터를 prop를 정의해서 받아옴
   props: {
     // eslint-disable-next-line vue/require-default-prop
     book: Object
