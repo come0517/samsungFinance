@@ -1,0 +1,32 @@
+/*
+    HTML Reset
+*/
+
+
+h1 {
+    font-size: 18px;
+    color: #212121;
+    letter-spacing: -0.9px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 16px;
+    color: #212121;
+    letter-spacing: 0;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 14px;
+    color: #212121;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 700;
+  }
+  
+  section {
+    min-height: 100vh;
+  }
