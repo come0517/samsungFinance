@@ -13,8 +13,20 @@
       </v-btn>
       
     </v-app-bar>
+
+    <v-app-bar style="margin-top:55px" app>
+      <v-btn icon>
+      <v-icon>mdi-chevron-left</v-icon>
+      </v-btn>
+      <v-toolbar-title>베트남 주식 펀드</v-toolbar-title>
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+      <v-icon>mdi-heart</v-icon>
+      </v-btn>
+    </v-app-bar>
     
-    <v-main>
+    <v-main style="padding-top:120px">
       <v-container>
         <Nuxt />    
       </v-container>

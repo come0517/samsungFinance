@@ -1,17 +1,5 @@
 <template>
   <div>   
-    <v-toolbar fixed>
-        <v-btn icon>
-          <v-icon>mdi-chevron-left</v-icon>
-        </v-btn>
-        <v-toolbar-title>베트남 주식 펀드</v-toolbar-title>
-        <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
-        </v-btn>
-    </v-toolbar>
-    
     <v-col 
       v-for="fundList in props"
       :key="fundList.id"
