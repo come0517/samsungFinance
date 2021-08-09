@@ -37,9 +37,9 @@ export default {
     items: [
       {icon: 'mdi-apps', title: 'Colors'         , to: '/guides/colors'},
       {icon: 'mdi-apps', title: 'Fonts'          , to: '/guides/fonts'},
-      {icon: 'mdi-apps', title: 'Layouts '         , to: '/guides/layouts'},
-      {icon: 'mdi-apps', title: 'Box'          , to: '/guides/boxes'},
-      {icon: 'mdi-apps', title: 'Form'         , to: '/guides/forms'},
+      {icon: 'mdi-apps', title: 'Layouts '       , to: '/guides/layouts'},
+      {icon: 'mdi-apps', title: 'Box'            , to: '/guides/boxes'},
+      {icon: 'mdi-apps', title: 'Form'           , to: '/guides/forms'},
       {icon: 'mdi-apps', title: 'Lists'          , to: '/guides/lists'},
       {icon: 'mdi-apps', title: 'Popup'          , to: '/guides/popup'},
       {icon: 'mdi-apps', title: 'Keypad'         , to: '/guides/Keypad'},

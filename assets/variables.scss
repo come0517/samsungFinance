@@ -3,5 +3,16 @@
 // The variables you want to modify
 // $font-size-root: 20px;
 
+@import '~vuetify/src/styles/styles.sass';
+
 // 상단 타이틀바 높이 지정
 $toolbar-btn-icon-size: 54px;
+
+
+$headings: map-deep-merge(
+    (
+        'h5': (
+            'font-size': 100rem
+        )
+    ), $headings
+);
