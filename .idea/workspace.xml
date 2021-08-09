@@ -3,28 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d61b7618-069b-4a8a-b360-1d3b376c84d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/assets/scss/colors/_systemColor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/assets/scss/colors/_systemColor.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/assets/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/assets/scss/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/components/NuxtLogo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/components/NuxtLogo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/components/Tutorial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/components/Tutorial.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/components/VuetifyLogo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/components/VuetifyLogo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/jsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/layouts/error.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/layouts/error.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/pages/fund/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/pages/fund/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/static/vuetify-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/static/vuetify-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/store/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/store/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/test/NuxtLogo.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/test/NuxtLogo.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss-sfip/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss-sfip/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="aa479332a98ce3d3a2ba65b77dca426511578da3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628225069956</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Octavia scss 추가">
+      <created>1628230421233</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628230421233</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git" />
     <MESSAGE value="layout 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout 수정" />
+    <MESSAGE value="Octavia scss 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="Octavia scss 추가" />
   </component>
 </project>

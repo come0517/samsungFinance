@@ -77,5 +77,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  storybook: {
+    // Options
+    addons: ['@storybook/addon-knobs', '@storybook/addon-viewport'],
   }
 }
