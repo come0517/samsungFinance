@@ -1,12 +1,132 @@
 <template>
   <section class="sfip">
-    <h1>Layouts - </h1>
+    <h1>Layouts - 일반</h1>
     <v-divider class="mb-5"/>
+    <nuxt-link to="/guides/layout1">일반 레이아웃 열기</nuxt-link>
+
+    
+
+    <h1 class="mt-10">Layouts - 하단버튼</h1>
+    <v-divider class="mb-5"/>
+    <nuxt-link to="/guides/layout2">하단버튼 레이아웃 열기</nuxt-link>
+
+
+    <h1 class="mt-10">Layouts - 팝업</h1>
+    <v-divider class="mb-5"/>
+
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+    >
+    <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color=""
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          팝업 레이아웃 열기
+        </v-btn>
+      </template>
+      <v-card>
+        <v-toolbar
+          
+          flat block tile
+          color=""
+        >
+          <v-btn
+            icon
+            @click="dialog = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title  >팝업 레이아웃</v-toolbar-title>
+          <v-spacer></v-spacer>
+          
+        </v-toolbar>
+        <v-list
+          three-line
+          subheader
+        >
+          <v-subheader>User Controls</v-subheader>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Content filtering</v-list-item-title>
+              <v-list-item-subtitle>Set the content filtering level to restrict apps that can be downloaded</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Password</v-list-item-title>
+              <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        
+      </v-card>
+      <v-footer :fixed=true :padless=true >
+        <v-btn block tile color="primary" @click="dialog = false">확인</v-btn>
+      </v-footer>
+    </v-dialog>
+
+    <h1 class="mt-10">Layouts - 팝업</h1>
+    <v-divider class="mb-5"/>
+
+    <v-dialog
+      v-model="dialog1"
+      hide-overlay
+      fullscreen
+      transition="dialog-bottom-transition"
+    >
+    <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color=""
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Dimm Layer 레이아웃 열기 (Bottom)
+        </v-btn>
+      </template>
+
+      
+        <v-card>
+          <v-toolbar
+            
+            flat block tile
+            color=""
+          >
+            <v-btn
+              icon
+              @click="dialog1 = false"
+            >
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <v-toolbar-title>팝업 레이아웃</v-toolbar-title>
+            <v-spacer></v-spacer>
+            
+          </v-toolbar>
+          
+          
+        </v-card>
+      <v-footer :fixed=true :padless=true >
+        <v-btn block tile color="primary" @click="dialog = false">확인</v-btn>
+      </v-footer>
+    </v-dialog>
   </section>
 </template>
 
 <script>
   export default {
       layout: 'sfip',
+      data: () => ({
+        dialog: false,
+        dialog1: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
+      })
   }
 </script>
