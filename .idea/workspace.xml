@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d61b7618-069b-4a8a-b360-1d3b376c84d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/components/Storybook/Link.stories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/components/Storybook/Link.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss-sfip/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss-sfip/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,18 +21,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="aa479332a98ce3d3a2ba65b77dca426511578da3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -39,7 +37,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -68,7 +65,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628225069956</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Octavia scss 추가">
+      <created>1628230421233</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628230421233</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Octavia views,Storybook">
+      <created>1628476697883</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628476697883</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,7 +93,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/develop" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -98,6 +109,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git" />
     <MESSAGE value="layout 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout 수정" />
+    <MESSAGE value="Octavia scss 추가" />
+    <MESSAGE value="Octavia views,Storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Octavia views,Storybook" />
   </component>
 </project>

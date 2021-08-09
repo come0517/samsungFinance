@@ -77,5 +77,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  storybook: {
+    // Options
+    port: 3003,
+    addons: [
+      '@storybook/addon-knobs', 
+      '@storybook/addon-viewport'
+    ],
+    decorators: [
+      // VApp decorator for Vuetify
+      `<v-app id='vuetify-storybook-decorator'><div><story/></div></v-app>`,
+    ],
   }
 }
