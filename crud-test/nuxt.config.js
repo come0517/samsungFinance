@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+const API_BASE_URL='https://crud-books-api.herokuapp.com/'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -47,7 +49,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.API_BASE_URL,
+    baseURL: API_BASE_URL,
     https: false,
     proxy: false,
     // proxy: {
