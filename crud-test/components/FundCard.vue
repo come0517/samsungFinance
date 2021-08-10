@@ -19,6 +19,20 @@
               <v-img :src="item.src"></v-img>
               </v-avatar>-->
             </nuxt-link>
+            <span class="float-right">
+              <nuxt-link :to="'/fund/edit/' + fund.fundCd">
+                <v-btn text color="amber darken-3">
+                  Edit
+                  <v-icon>mdi-pencil</v-icon>
+                </v-btn>
+              </nuxt-link>
+              <nuxt-link :to="'/fund/delete/' + fund.fundCd">
+                <v-btn text color="red darken-3">
+                  Delete
+                  <v-icon>mdi-delete</v-icon>
+                </v-btn>
+              </nuxt-link>
+            </span>
           </div>
         </v-card>
       </v-col>

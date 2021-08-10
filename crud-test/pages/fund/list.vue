@@ -20,7 +20,14 @@
       <!--<v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>-->
-      <BottomSheets></BottomSheets>
+
+      <nuxt-link to="/fund/create">
+        <v-btn color="blue darken-3" dark>
+          Add Fund
+          <v-icon>mdi-plus</v-icon>
+        </v-btn>
+      </nuxt-link>
+      <!-- <BottomSheets></BottomSheets> -->
     </v-app-bar>
     <FundCard v-for="(fund, index) in funds" :key="index" :fund="fund" :data-index="index"/>
   </v-card>
@@ -29,12 +36,12 @@
 <script>
 import { mapState } from 'vuex'
 import FundCard from '@/components/FundCard.vue'
-import BottomSheet from '@/components/BottomSheets.vue'
+//import BottomSheet from '@/components/BottomSheets.vue'
 
 export default {
   components: {
-    FundCard,
-    BottomSheet
+    FundCard
+    //BottomSheet
   },
   async fetch({ store, error }) {
     try {

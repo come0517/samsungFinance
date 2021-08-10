@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h1>Delete book</h1>
+    <h1>Delete fund</h1>
     <v-divider></v-divider>
     <br>
-    <h2>{{ book.title }}</h2>
-    <form @submit.prevent="deleteThisBook(book.id)">
+    <h2>{{ fund.fundNm }}</h2>
+    <form @submit.prevent="deleteThisFund(fund.fundCd)">
       <br>
       <p>
         <em>
@@ -31,27 +31,28 @@ import { mapState, mapActions } from 'vuex'
 export default {
   async fetch({ store, error, params }) {
     try {
-      await store.dispatch('getBook', params.id)
+      await store.dispatch('getFundDetail', params.id)
     } catch (e) {
       error({
         statusCode: 503,
-        message: 'Unable to fetch book #' + params.id
+        message: 'Unable to fetch fund #' + params.id
       })
     }
   },
   computed: mapState({
-    book: state => state.book
+    fund: state => state.fund
   }),
   methods: {
-    ...mapActions(['deleteBook']),
-    deleteThisBook(id) {
-      this.deleteBook(id)
+    ...mapActions(['deleteFund']),
+    deleteThisFund(fundCd) {
+      console.log(fundCd)
+      this.deleteFund(fundCd)
       this.$router.push('/fund/list')
     }
   },
   head() {
     return {
-      title: this.book.title
+      fundNm: this.fund.fundNm
     }
   }
 }

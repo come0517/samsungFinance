@@ -1,3 +1,5 @@
+import requestApi from '../api/requestApi.js'
+
 // vuex : 각각 컴포넌트 (dispatch)--> actions (commit)--> mutations (state)--> state -->모든 컴포넌트에서 활용
 
 // 프로젝트에서 공통으로 사용할 변수를 정의. 프로젝트 내의 모든 곳에서 참조 및 사용 가능.
@@ -12,14 +14,16 @@ export const state = () => ({
 // 화면단에서 store.dispatch('함수명', '전달인자', {root:true}) 로 실행시킴
 export const actions = {
   getBooks({ commit }) {
-    return this.$axios.get('/books').then(response => {
+    return this.$axios.get('books').then(response => {
+      // return requestApi.getBooks().then(response => {
       // commit('함수명', '전달인자') 로 mutation 실행
       commit('SET_BOOKS', response.data)
-      console.log(response.data)
+      // console.log(response.data)
     })
   },
   getBook({ commit }, id) {
     return this.$axios.get('/books/' + id).then(response => {
+      //return requestApi.getBook(id).then(response => {
       commit('SET_BOOK', response.data)
     })
   },
@@ -37,24 +41,53 @@ export const actions = {
     this.$axios.put('/books/' + id, state.book)
   },
   getFunds({ commit }) {
-    return this.$axios.post('http://localhost:8080/product/fund/list', {
-      nextVal: '',
-      nextYN: '',
-      orderVal: '',
-      searchText: ''
-    }).then(response => {
-      commit('SET_FUNDS', response.data.data)
-      console.log(response.data.data)
-    })
+    return this.$axios
+      .post('http://localhost:8080/product/fund/search')
+      .then(response => {
+        commit('SET_FUNDS', response.data.data)
+        console.log(response.data.data)
+      })
   },
   getFundDetail({ commit }, fundCd) {
-    return this.$axios.get('http://localhost:8080/product/fund/detail/' + fundCd).then(response => {
-      commit('SET_FUND_DETAIL', response.data.data)
-      console.log(response.data.data)
-    })
+    return this.$axios
+      .post('http://localhost:8080/product/fund/detail/', {
+        fundCd: fundCd,
+        searchType: 'code'
+      })
+      .then(response => {
+        commit('SET_FUND_DETAIL', response.data.data)
+        console.log(response.data.data)
+      })
+  },
+  addFund({ commit }, fund) {
+    console.log(fund)
+    return this.$axios
+      .post('http://localhost:8080/product/fund/create', fund)
+      .then(response => {
+        //return requestApi.createFund(fund).then(response => {
+        commit('ADD_FUND', fund)
+        //})
+      })
+  },
+  putFund({ state }, fundCd) {
+    this.$axios
+      .post('http://localhost:8080/product/fund/create', state.fund)
+      .then(response => {
+        //return requestApi.createFund(fund).then(response => {
+        //commit('UPDATE_FUND', response.data.data)
+        //})
+      })
+  },
+  deleteFund({ commit }, fundCd) {
+    return this.$axios
+      .post('http://localhost:8080/product/fund/delete', {
+        fundCd: fundCd
+      })
+      .then(response => {
+        commit('DELETE_FUND')
+      })
   }
 }
-
 // state를 변경시는 역할. 동기처리
 export const mutations = {
   SET_BOOKS(state, books) {
@@ -79,5 +112,19 @@ export const mutations = {
   },
   SET_FUND_DETAIL(state, fund) {
     state.fund = fund
+  },
+  ADD_FUND: (state, fund) => {
+    console.log(state.funds)
+    state.funds.push(fund)
+  },
+  GET_FUND(state, fund) {
+    state.fund = { ...state.fund, ...fund }
+  },
+  UPDATE_FUND(state, fund) {
+    state.fund = fund
+  },
+  DELETE_FUND: (state, fundCd) => {
+    const index = state.fund.findIndex(fund => fund.fundCd === fundCd)
+    state.funds.splice(index, 1)
   }
 }

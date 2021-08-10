@@ -2,7 +2,7 @@
   <div>
     <h1>Add a book</h1>
     <v-divider></v-divider>
-    <br />
+    <br>
     <v-form v-model="isFormValid" @submit.prevent="addNewBook">
       <v-text-field
         v-model="author"
@@ -64,17 +64,9 @@
         clearable
         required
       ></v-text-field>
-      <p v-if="!isFormValid" style="color: red; font-style: italic">
-        Please fill in all fields
-      </p>
-      <v-btn
-        type="submit"
-        :disabled="!isFormValid"
-        color="primary"
-        dark
-        absolute
-        right
-        >Submit
+      <p v-if="!isFormValid" style="color: red; font-style: italic">Please fill in all fields</p>
+      <v-btn type="submit" :disabled="!isFormValid" color="primary" dark absolute right>
+        Submit
         <v-icon dark right>mdi-checkbox-marked-circle-outline</v-icon>
       </v-btn>
     </v-form>
@@ -87,7 +79,7 @@ export default {
   data() {
     return {
       isFormValid: false,
-      formRules: [(v) => !!v || 'The field is required']
+      formRules: [v => !!v || 'The field is required']
     }
   },
   methods: {
