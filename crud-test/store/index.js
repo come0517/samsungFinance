@@ -1,5 +1,3 @@
-import requestApi from '~/api/requestApi.js'
-
 // vuex : 각각 컴포넌트 (dispatch)--> actions (commit)--> mutations (state)--> state -->모든 컴포넌트에서 활용
 
 // 프로젝트에서 공통으로 사용할 변수를 정의. 프로젝트 내의 모든 곳에서 참조 및 사용 가능.
@@ -14,38 +12,43 @@ export const state = () => ({
 // 화면단에서 store.dispatch('함수명', '전달인자', {root:true}) 로 실행시킴
 export const actions = {
   getBooks({ commit }) {
-    return requestApi.getBooks().then(response => {
+    return this.$axios.get('/books').then(response => {
       // commit('함수명', '전달인자') 로 mutation 실행
       commit('SET_BOOKS', response.data)
       console.log(response.data)
     })
   },
   getBook({ commit }, id) {
-    return requestApi.getBook(id).then(response => {
+    return this.$axios.get('/books/' + id).then(response => {
       commit('SET_BOOK', response.data)
     })
   },
   addBook({ commit }, book) {
-    return requestApi.createBook(book).then(response => {
+    return this.$axios.post('/books', book).then(response => {
       commit('ADD_BOOK', book)
     })
   },
   deleteBook({ commit }, id) {
-    return requestApi.removeBook(id).then(response => {
+    return this.$axios.delete('/books/' + id).then(response => {
       commit('DELETE_BOOK')
     })
   },
   putBook({ state }, id) {
-    requestApi.putBook(id, state.book)
+    this.$axios.put('/books/' + id, state.book)
   },
   getFunds({ commit }) {
-    return requestApi.getFunds().then(response => {
+    return this.$axios.post('http://localhost:8080/product/fund/list', {
+      nextVal: '',
+      nextYN: '',
+      orderVal: '',
+      searchText: ''
+    }).then(response => {
       commit('SET_FUNDS', response.data.data)
       console.log(response.data.data)
     })
   },
   getFundDetail({ commit }, fundCd) {
-    return requestApi.getFundDetail(fundCd).then(response => {
+    return this.$axios.get('http://localhost:8080/product/fund/detail/' + fundCd).then(response => {
       commit('SET_FUND_DETAIL', response.data.data)
       console.log(response.data.data)
     })
