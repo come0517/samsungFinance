@@ -28,21 +28,23 @@
 
         <v-divider></v-divider>
    
-        <v-row dense>
-          <v-col
-          v-for="card in props"
-          :key="card.title"
-          cols="4"
-          >
-          <v-card style="min-height:200px">
+        <v-container>
+          <v-row dense>
+            <v-col
+            v-for="card in props"
+            :key="card.title"
+            cols="4"
+            >
+            <v-card style="min-height:200px">
 
-          <v-card-title v-text="card.title"></v-card-title>
-          <v-card-title v-text="card.content"></v-card-title>
-          <v-card-title v-text="card.etc"></v-card-title>
+            <v-card-title v-text="card.title" style="font-size:1rem"></v-card-title>
+            <v-card-title v-text="card.content" style="font-size:1rem"></v-card-title>
+            <v-card-title v-text="card.etc" style="font-size:1rem"></v-card-title>
 
-          </v-card>
-          </v-col>
-        </v-row>
+            </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
 
         <v-col align="right">기준일 : 2021-08-06</v-col>
 

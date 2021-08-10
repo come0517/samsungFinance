@@ -10,11 +10,11 @@
         
         <v-container>
           <v-row>
-            <v-col cols="1" v-text="fundList.fee"></v-col>
+            <v-col cols="4" v-text="fundList.fee"></v-col>
             <v-divider vertical></v-divider>
-            <v-col cols="1" v-text="fundList.risk"></v-col>
+            <v-col cols="4" v-text="fundList.risk"></v-col>
             <v-divider vertical></v-divider>
-            <v-col cols="1" v-text="fundList.online"></v-col>
+            <v-col cols="4" v-text="fundList.online"></v-col>
           </v-row>
         </v-container>
 
