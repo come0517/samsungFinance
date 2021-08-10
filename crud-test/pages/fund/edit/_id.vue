@@ -262,8 +262,8 @@ export default {
   },
   methods: {
     ...mapActions(['putFund']),
-    saveThisFund(fundCd) {
-      this.putFund(fundCd)
+    async saveThisFund(fundCd) {
+      await this.putFund(fundCd)
         .then(response => {
           this.success = true
         })

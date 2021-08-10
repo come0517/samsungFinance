@@ -124,7 +124,7 @@ export const mutations = {
     state.fund = fund
   },
   DELETE_FUND: (state, fundCd) => {
-    const index = state.fund.findIndex(fund => fund.fundCd === fundCd)
+    const index = state.funds.findIndex(fund => fund.fundCd === fundCd)
     state.funds.splice(index, 1)
   }
 }

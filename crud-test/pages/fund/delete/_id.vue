@@ -44,9 +44,9 @@ export default {
   }),
   methods: {
     ...mapActions(['deleteFund']),
-    deleteThisFund(fundCd) {
+    async deleteThisFund(fundCd) {
       console.log(fundCd)
-      this.deleteFund(fundCd)
+      await this.deleteFund(fundCd)
       this.$router.push('/fund/list')
     }
   },

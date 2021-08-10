@@ -168,8 +168,8 @@ export default {
   },
   methods: {
     ...mapActions(['addFund']),
-    addNewFund() {
-      this.addFund({
+    async addNewFund() {
+      await this.addFund({
         fundCd: this.fundCd,
         fundNm: this.fundNm,
         prdtId: this.prdtId,
