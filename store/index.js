@@ -1,4 +1,4 @@
-import requestApi from '../api/requestApi.js'
+//import requestApi from '../api/requestApi.js'
 
 // vuex : 각각 컴포넌트 (dispatch)--> actions (commit)--> mutations (state)--> state -->모든 컴포넌트에서 활용
 
