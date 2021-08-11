@@ -19,7 +19,7 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="`${item.title} 1`" />
+            <v-list-item-title v-text="`${item.title}`" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -98,9 +98,19 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'main',
           to: '/'
         },
+        {
+          icon: 'mdi-apps',
+          title: 'fund',
+          to: '/fund/list'
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'list',
+          to: '/list/list'
+        },                
         {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
