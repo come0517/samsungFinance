@@ -110,7 +110,13 @@ export default {
           icon: 'mdi-apps',
           title: 'pop',
           to: '/pop/list'
-        },                
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'charts',
+          to: '/app/charts/apexChart/ApexAreaChart'
+        },
+        
         {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
