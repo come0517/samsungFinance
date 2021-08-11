@@ -1,16 +1,17 @@
 <template>
   <div>   
-    <v-toolbar fixed>
-        <v-btn icon>
-        <v-icon>mdi-chevron-left</v-icon>
-        </v-btn>
-        <v-toolbar-title>베트남 주식 펀드</v-toolbar-title>
-        <v-spacer></v-spacer>
+    
+    <v-app-bar style="margin-top:55px" app>
+      <v-btn icon>
+      <v-icon>mdi-chevron-left</v-icon>
+      </v-btn>
+      <v-toolbar-title>베트남 주식 펀드</v-toolbar-title>
+      <v-spacer></v-spacer>
 
-        <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-        </v-btn>
-    </v-toolbar>
+      <v-btn icon>
+      <v-icon>mdi-heart</v-icon>
+      </v-btn>
+    </v-app-bar>
     
     <v-col cols="16">
       <v-card
