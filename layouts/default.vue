@@ -108,8 +108,8 @@ export default {
         },
         {
           icon: 'mdi-apps',
-          title: 'list',
-          to: '/list/list'
+          title: 'pop',
+          to: '/pop/list'
         },                
         {
           icon: 'mdi-chart-bubble',
