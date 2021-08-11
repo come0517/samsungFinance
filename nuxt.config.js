@@ -1,11 +1,13 @@
 import colors from 'vuetify/es5/util/colors'
 
+const API_BASE_URL='https://crud-books-api.herokuapp.com/'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // TODO: Meta Tag 정의 
+  // TODO: Meta Tag 정의
   head: {
     titleTemplate: '%s - 삼성증권',
     title: '삼성증권',
@@ -26,6 +28,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,7 +51,30 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios'
+  ],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    baseURL: API_BASE_URL,
+    https: false,
+    proxy: false,
+    // proxy: {
+    //   '/product/fund/': 'http://localhost:8080/product/fund',
+    //   '/api2/': 'http://10.0.0.186:8080/product/fund'
+    //   // 프록시 모듈에서 /api/는 API 끝점의 모든 요청에 추가됩니다. 이를 제거하려면 경로 다시 쓰기 옵션 사용해야
+    //   //'/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/': ''} }
+    // },
+    // 실패한 요청을 자동으로 가로채서 설정된 값대로 재시도
+    //retry: { retries: 3 },
+    credentials: false,
+    // get, post ... common Accept header
+    common: {
+      Accept: 'application/json, text/plain, */*'
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
