@@ -41,6 +41,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -135,5 +136,9 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ],
     },
+  },
+
+  googleAnalytics: {
+    // id: 'UA-12301-2', // Used as fallback if no runtime config is provided
   }
 }
