@@ -118,7 +118,14 @@ export default {
     decorators: [
       '<v-app><story/></v-app>'
     ],
-    port: 4000
+    port: 4000,
+    stories: [
+      '~/components/Storybook/*/*.stories.js',
+    ],    
+    addons: [
+      '@storybook/addon-controls',
+      '@storybook/addon-notes',
+    ]
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
