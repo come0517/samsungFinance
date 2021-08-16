@@ -9,9 +9,12 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "test": "jest"
+    "test": "jest",
+    "bench:stateless": "ab -c1 -n1000 http://127.0.0.1:3000/guide/index",
+    "bench:stateless-big": "ab -c1 -n500 http://127.0.0.1:3000/stateless-big"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.15.1",
@@ -36,5 +39,9 @@
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4"
+  },
+  "resolutions": {
+    "@babel/core": "7.13.15",
+    "@babel/preset-env": "7.13.15"
   }
 }

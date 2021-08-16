@@ -4,7 +4,7 @@
     <v-divider class="mb-5"/>
     <nuxt-link to="/guides/layout1">일반 레이아웃 열기</nuxt-link>
 
-    
+
 
     <h1 class="mt-10">Layouts - 하단버튼</h1>
     <v-divider class="mb-5"/>
@@ -20,7 +20,7 @@
       hide-overlay
       transition="dialog-bottom-transition"
     >
-    <template v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ on, attrs }">
         <v-btn
           color=""
           dark
@@ -32,7 +32,7 @@
       </template>
       <v-card>
         <v-toolbar
-          
+
           flat block tile
           color=""
         >
@@ -44,7 +44,7 @@
           </v-btn>
           <v-toolbar-title>팝업 레이아웃</v-toolbar-title>
           <v-spacer></v-spacer>
-          
+
         </v-toolbar>
         <v-list
           three-line
@@ -103,9 +103,9 @@
       <v-footer :fixed=true :padless=true >
         <v-btn block tile color="primary" @click="dialog1 = false">확인</v-btn>
       </v-footer>
-    
+
     </v-bottom-sheet>
-    
+
   </section>
 </template>
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/icon/search</title>
+    <g id="btn/icon/search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        <circle id="Oval" stroke="#212121" stroke-width="2" cx="10" cy="11" r="7"></circle>
+        <path d="M17.8597521,13.3952169 C18.3978402,13.3986148 18.8332407,13.8339227 18.8367533,14.37201 L18.882751,21.4184238 C18.8862058,21.9476656 18.4599712,22.3795016 17.9307293,22.3829564 C17.9266271,22.3829832 17.9225247,22.3829836 17.9184225,22.3829577 C17.3803344,22.3795598 16.9449339,21.9442519 16.9414213,21.4061646 L16.8954236,14.3597508 C16.8919688,13.830509 17.3182034,13.398673 17.8474453,13.3952182 C17.8515475,13.3951914 17.8556499,13.395191 17.8597521,13.3952169 Z" id="Rectangle" fill="#212121" transform="translate(17.889087, 17.889087) rotate(-45.000000) translate(-17.889087, -17.889087) "></path>
+    </g>
+</svg>

@@ -2,8 +2,7 @@
 <v-form>
   <section class="sfip">
 
-    <h1>fonts</h1>
-    <v-divider class="mb-5"/>
+    <s-subject :subject="'Form Controls'"/>
 
     <v-list>
         <v-list-item>
@@ -32,6 +31,158 @@
           ></v-text-field>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Radio</v-list-item-title>
+            <v-radio-group v-model="checkboxA">
+              <v-radio
+                :label="'기본 선택 된 Radio입니다.'"
+                :value="'1'"
+              ></v-radio>
+              <v-radio
+                :label="'선택가능한 Radio 입니다.'"
+              ></v-radio>
+              <v-radio
+                disabled
+                :label="'선택할수없습니다.'"
+              ></v-radio>
+            </v-radio-group>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Checkbox</v-list-item-title>
+            <v-container fluid>
+              <v-row>
+                <v-col
+                  cols="12"
+                  sm="4"
+                  md="4"
+                >
+                  <v-checkbox
+                    v-model="ex4"
+                    label="red"
+                    color="red"
+                    value="red"
+                    hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="ex4"
+                    label="red darken-3"
+                    color="red darken-3"
+                    value="red darken-3"
+                    hide-details
+                  ></v-checkbox>
+                </v-col>
+                <v-col
+                  cols="12"
+                  sm="4"
+                  md="4"
+                >
+                  <v-checkbox
+                    v-model="ex4"
+                    label="indigo"
+                    color="indigo"
+                    value="indigo"
+                    hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="ex4"
+                    label="indigo darken-3"
+                    color="indigo darken-3"
+                    value="indigo darken-3"
+                    hide-details
+                  ></v-checkbox>
+                </v-col>
+                <v-col
+                  cols="12"
+                  sm="4"
+                  md="4"
+                >
+                  <v-checkbox
+                    v-model="ex4"
+                    label="orange"
+                    color="orange"
+                    value="orange"
+                    hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="ex4"
+                    label="orange darken-3"
+                    color="orange darken-3"
+                    value="orange darken-3"
+                    hide-details
+                  ></v-checkbox>
+                </v-col>
+              </v-row>
+
+              <v-row class="mt-12">
+                <v-col
+                  cols="12"
+                  sm="4"
+                  md="4"
+                >
+                  <v-checkbox
+                    v-model="ex4"
+                    label="primary"
+                    color="primary"
+                    value="primary"
+                    hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="ex4"
+                    label="secondary"
+                    color="secondary"
+                    value="secondary"
+                    hide-details
+                  ></v-checkbox>
+                </v-col>
+                <v-col
+                  cols="12"
+                  sm="4"
+                  md="4"
+                >
+                  <v-checkbox
+                    v-model="ex4"
+                    label="success"
+                    color="success"
+                    value="success"
+                    hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="ex4"
+                    label="info"
+                    color="info"
+                    value="info"
+                    hide-details
+                  ></v-checkbox>
+                </v-col>
+                <v-col
+                  cols="12"
+                  sm="4"
+                  md="4"
+                >
+                  <v-checkbox
+                    v-model="ex4"
+                    label="warning"
+                    color="warning"
+                    value="warning"
+                    hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="ex4"
+                    label="error"
+                    color="error"
+                    value="error"
+                    hide-details
+                  ></v-checkbox>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-list-item-content>
+        </v-list-item>
         <!-- <v-list-item>
           <v-list-item-content>
             <v-list-item-title>폼-완료문구 있을 경우</v-list-item-title>
@@ -46,6 +197,8 @@
           ></v-text-field>
           </v-list-item-content>
         </v-list-item> -->
+
+
     </v-list>
 
   </section>
@@ -53,10 +206,13 @@
 </template>
 
 <script>
+import SSubject from '~/components/commons/SSubject.vue'
   export default {
+  components: { SSubject },
     layout: 'sfip',
     data () {
       return {
+        checkboxA: '1',
         title: 'Preliminary report',
         email: '',
         rules: {

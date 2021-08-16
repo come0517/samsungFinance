@@ -1,123 +1,31 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+/*
+  공통 스타일 정의 및 Vuetify UI 설정 변경용으로 사용 합니다.
 
-// 폰트 변경
+  # Appendix
+  A1. Vuetify UI Guide Link: https://github.com/nuxt-community/vuetify-module#customvariables
+*/
 
-$body-font-family: 'Noto Sans KR', sans-serif !default;
+// 기본 폰트 변경 - 2021.08.10 : 통합플랫폼 공통 가이드 기준으로 변경 적용 (영어/숫자: Roboto, 한글: 시스템폰트)
+$body-font-family: Roboto
+    '맑은 고딕', 'malgun gothic',
+    'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo',
+    'Microsoft NeoGothic', 'Droid sans'
+    sans-serif !default;
 
-// 상단 타이틀바 높이 지정
-$toolbar-btn-icon-size: 54px;
+// $toolbar-content-padding-y: 0;
 
-@import '~vuetify/src/styles/styles.sass';
+$toolbar-content-padding-x: 24px;
 
-$headings: map-deep-merge(
-  (
-    'h1': (
-      'size': 6rem,
-      'weight': 300,
-      'line-height': 6rem,
-      'letter-spacing': -.015625em,
-      'font-family': $heading-font-family,
-      'text-transform': false
-    ),
-    'h2': (
-      'size': 3.75rem,
-      'weight': 300,
-      'line-height': 3.75rem,
-      'letter-spacing': -.0083333333em,
-      'font-family': $heading-font-family,
-      'text-transform': false
-    ),
-    'h3': (
-      'size': 3rem,
-      'weight': 400,
-      'line-height': 3.125rem,
-      'letter-spacing': normal,
-      'font-family': $heading-font-family,
-      'text-transform': false
-    ),
-    'h4': (
-      'size': 2.125rem,
-      'weight': 400,
-      'line-height': 2.5rem,
-      'letter-spacing': .0073529412em,
-      'font-family': $heading-font-family,
-      'text-transform': false
-    ),
-    'h5': (
-      'size': 10.5rem,
-      'weight': 400,
-      'line-height': 2rem,
-      'letter-spacing': normal,
-      'font-family': $heading-font-family,
-      'text-transform': false
-    ),
-    'h6': (
-      'size': 1.25rem,
-      'weight': 500,
-      'line-height': 2rem,
-      'letter-spacing': .0125em,
-      'font-family': $heading-font-family,
-      'text-transform': false
-    ),
-    'subtitle-1': (
-      'size': 1rem,
-      'weight': normal,
-      'line-height': 1.75rem,
-      'letter-spacing': .009375em,
-      'font-family': $body-font-family,
-      'text-transform': false
-    ),
-    'subtitle-2': (
-      'size': .875rem,
-      'weight': 500,
-      'line-height': 1.375rem,
-      'letter-spacing': .0071428571em,
-      'font-family': $body-font-family,
-      'text-transform': false
-    ),
-    'body-1': (
-      'size': 1rem,
-      'weight': 400,
-      'line-height': 1.5rem,
-      'letter-spacing': .03125em,
-      'font-family': $body-font-family,
-      'text-transform': false
-    ),
-    'body-2': (
-      'size': .875rem,
-      'weight': 400,
-      'line-height': 1.25rem,
-      'letter-spacing': .0178571429em,
-      'font-family': $body-font-family,
-      'text-transform': false
-    ),
-    'button': (
-      'size': .875rem,
-      'weight': 500,
-      'line-height': 2.25rem,
-      'letter-spacing': .0892857143em,
-      'font-family': $body-font-family,
-      'text-transform': uppercase
-    ),
-    'caption': (
-      'size': .75rem,
-      'weight': 400,
-      'line-height': 1.25rem,
-      'letter-spacing': .0333333333em,
-      'font-family': $body-font-family,
-      'text-transform': false
-    ),
-    'overline': (
-      'size': .75rem,
-      'weight': 500,
-      'line-height': 2rem,
-      'letter-spacing': .1666666667em,
-      'font-family': $body-font-family,
-      'text-transform': uppercase
-    )
-  ),
-  $headings
-);
+// 기타 공통 스타일 적용 (Reset.css 적용 추천)
+// .v-application {
+//   .text-h3 {
+//     font-size: 2em !important
+//   }
+// };
+
+// Application globals
+$title-height: 36px;
+$title-scroll-height: 24px;
+$navi-height: 60px;
+$header-height: $title-height + $navi-height;
+

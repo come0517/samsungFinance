@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/icon/notice_line</title>
+    <g id="btn/icon/notice_line" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+        <path d="M8,0.5 C10.0710678,0.5 11.9460678,1.33946609 13.3033009,2.69669914 C14.6605339,4.05393219 15.5,5.92893219 15.5,8 C15.5,10.0710678 14.6605339,11.9460678 13.3033009,13.3033009 C11.9460678,14.6605339 10.0710678,15.5 8,15.5 C5.92893219,15.5 4.05393219,14.6605339 2.69669914,13.3033009 C1.33946609,11.9460678 0.5,10.0710678 0.5,8 C0.5,5.92893219 1.33946609,4.05393219 2.69669914,2.69669914 C4.05393219,1.33946609 5.92893219,0.5 8,0.5 Z" id="Rectangle" stroke="#888888"></path>
+        <line x1="8" y1="10" x2="8" y2="11" id="Path-7" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="8" y1="5" x2="8" y2="8" id="Path-7" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+    </g>
+</svg>

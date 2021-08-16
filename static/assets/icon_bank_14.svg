@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_bank_14</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-7-Dropdown-Box4" transform="translate(-1668.000000, -878.000000)">
+            <g id="03-Contents" transform="translate(600.000000, 196.000000)">
+                <g id="img" transform="translate(888.000000, 44.000000)">
+                    <g id="Group-3" transform="translate(0.000000, 1.000000)">
+                        <g id="Group-5" transform="translate(0.000000, 240.000000)">
+                            <g id="icon_bank_14" transform="translate(180.000000, 397.000000)">
+                                <circle id="logo" stroke="#DDDDDD" stroke-width="1.17" fill="#FFFFFF" cx="14" cy="14" r="13.415"></circle>
+                                <g id="logo" transform="translate(8.000000, 8.000000)">
+                                    <polygon id="Fill-1" stroke="#FFFFFF" stroke-width="0.585" fill="#0090D0" points="0 12 12 12 12 3.63797881e-12 0 3.63797881e-12"></polygon>
+                                    <polygon id="Fill-2" fill="#0090D0" points="0 0 2.99886062 3 6 0"></polygon>
+                                    <polygon id="Fill-3" fill="#0099D7" points="0 6 3 3.00122707 0 0"></polygon>
+                                    <polygon id="Fill-4" fill="#0090D0" points="6 6 3.00113938 3 0 6"></polygon>
+                                    <polygon id="Fill-5" fill="#0082C8" points="3 2.99877293 6 6 6 3.63797881e-12"></polygon>
+                                    <polygon id="Fill-6" fill="#0070BA" points="6 6 9 3.00122707 6 0"></polygon>
+                                    <polygon id="Fill-7" fill="#004C97" points="12 6 9.00113938 3 6 6"></polygon>
+                                    <polygon id="Fill-8" fill="#0082C8" points="0 6 2.99868533 9 6 6"></polygon>
+                                    <polygon id="Fill-9" fill="#0070BA" points="0 6 0 12 3 9.00113938"></polygon>
+                                    <polygon id="Fill-10" fill="#0066B2" points="6 12 3.00113938 9 0 12"></polygon>
+                                    <polygon id="Fill-11" fill="#00519B" points="6 12 6 6 3 8.99886062"></polygon>
+                                    <polygon id="Fill-12" fill="#1B3281" points="6 6 8.99868533 9 12 6"></polygon>
+                                    <polygon id="Fill-13" fill="#004C97" points="6 6 6 12 9 9.00113938"></polygon>
+                                    <polygon id="Fill-14" fill="#1B3281" points="12 12 9.00113938 9 6 12"></polygon>
+                                    <polygon id="Fill-15" fill="#1B3281" points="12 12 12 6 9 8.99886062"></polygon>
+                                    <polygon id="Fill-16" fill="#0066B2" points="6 0 8.99868533 3 12 0"></polygon>
+                                    <polygon id="Fill-17" fill="#00519B" points="9 2.99877293 12 6 12 3.63797881e-12"></polygon>
+                                    <polygon id="Fill-18" fill="#FEFEFE" points="11 7.59413803 7.42531444 4 2 9.74077342 3.97915836 11.8295638 7.42531444 8.24747681 11 12"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

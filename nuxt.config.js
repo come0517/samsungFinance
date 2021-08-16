@@ -5,10 +5,11 @@ export default {
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // TODO: Meta Tag 정의 
+  // TODO: Meta Tag 정의
   head: {
-    titleTemplate: '%s - 삼성증권',
-    title: '삼성증권',
+    titleTemplate(titleChunk) {
+      return titleChunk ? `${titleChunk} - 삼성증권` : '삼성증권'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,16 +21,24 @@ export default {
     ]
   },
 
+  // router: {
+  //   middleware: ['auth']
+  // },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/page.js',
+    "~/plugins/mixins.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    '~/components/commons/'
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -45,6 +54,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // '@nuxtjs/auth-next',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -73,6 +83,7 @@ export default {
           decrease: '#286EF1',
           warning: '#FF392A',
           error: '#FF392A',
+          hover: '#2058C0'
         },
         dark: {
           primary: colors.blue.darken2,

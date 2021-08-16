@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_bank_2</title>
+    <defs>
+        <polygon id="path-1" points="0 0 11 0 11 13 0 13"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-7-Dropdown-Box4" transform="translate(-1668.000000, -614.000000)">
+            <g id="03-Contents" transform="translate(600.000000, 196.000000)">
+                <g id="img" transform="translate(888.000000, 44.000000)">
+                    <g id="Group-3" transform="translate(0.000000, 1.000000)">
+                        <g id="Group-5" transform="translate(0.000000, 240.000000)">
+                            <g id="icon_bank_2" transform="translate(180.000000, 133.000000)">
+                                <circle id="logo" stroke="#DDDDDD" stroke-width="1.17" fill="#FFFFFF" cx="14" cy="14" r="13.415"></circle>
+                                <g id="logo" transform="translate(8.000000, 7.000000)">
+                                    <polygon id="Fill-1" fill="#FEC20D" points="9 0 5.99922121 1.32053559 3 0 5.99922121 5"></polygon>
+                                    <g id="Group-4" transform="translate(0.000000, 1.000000)">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <g id="Clip-3"></g>
+                                        <path d="M9.11308374,3.4841788 L10.9849804,2.70059233 L10.9849804,0 L7.63048634,1.40509034 L5.77193647,4.88186024 C7.16057244,5.01406149 8.24305077,6.17128766 8.24305077,7.57416586 C8.24305077,9.07156883 7.01543051,10.2800954 5.50026694,10.2800954 C3.98456949,10.2800954 2.75613063,9.07156883 2.75613063,7.57416586 C2.75613063,6.17128766 3.84166982,5.01406149 5.2269602,4.88186024 L3.37061699,1.40509034 L0.0161229264,0 L0.0161229264,2.70059233 L1.88745013,3.4841788 C0.732400837,4.47791784 0,5.94224417 0,7.57416586 C0,10.5714297 2.46193171,13 5.50026694,13 C8.53806829,13 11,10.5714297 11,7.57416586 C11,5.94224417 10.2692364,4.47791784 9.11308374,3.4841788" id="Fill-2" fill="#FEC20D" mask="url(#mask-2)"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

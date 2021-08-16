@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn_bottombar_2_off</title>
+    <g id="btn_bottombar_2_off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="guide" x="0" y="0" width="24" height="24"></rect>
+        <path d="M20.5882353,22 L3.41176471,22 C2.63176471,22 2,21.3682353 2,20.5882353 L2,3.41176471 C2,2.63176471 2.63176471,2 3.41176471,2 L20.5882353,2 C21.3682353,2 22,2.63176471 22,3.41176471 L22,20.5882353 C22,21.3682353 21.3682353,22 20.5882353,22 Z" id="Stroke-1" stroke="#212121" stroke-width="2" stroke-linejoin="round"></path>
+        <polyline id="Path-5" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(11.600000, 12.017252) scale(1, -1) translate(-11.600000, -12.017252) " points="2 11.7584582 5.1373081 11.7584582 8.10317184 7.6 14.2707707 16.4345035 17.6343512 11.7584582 21.2000008 11.7584582"></polyline>
+    </g>
+</svg>

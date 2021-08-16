@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn_bottombar_5_off</title>
+    <g id="btn_bottombar_5_off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        <circle id="Oval" stroke="#212121" stroke-width="2" stroke-linejoin="round" cx="12" cy="12" r="10.5"></circle>
+        <path d="M7.17000003,9.1 L9.44962751,14.7435085 C9.54461199,14.9840197 9.87126593,14.9767314 9.95930033,14.7337909 L11.9655578,9.24819372 C11.9864081,9.1923174 12.0559089,9.1923174 12.0790759,9.24576432 L14.2984693,14.7435085 C14.3957705,14.9840197 14.7201077,14.9767314 14.8081421,14.7337909 L16.8700003,9.1 M6.2,12.0100001 L8.14000006,12.0100001 M15.9000003,12.0100001 L17.8400003,12.0100001" id="Combined-Shape" stroke="#212121" stroke-width="1.64900005" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>

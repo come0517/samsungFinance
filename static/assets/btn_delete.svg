@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn_delete</title>
+    <g id="btn_delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+        <circle id="Oval" fill="#DDDDDD" cx="8" cy="8" r="8"></circle>
+        <line x1="5" y1="5" x2="11" y2="11" id="Path-6" stroke="#FFFFFF" stroke-linecap="round"></line>
+        <line x1="5" y1="11" x2="11" y2="5" id="Path-6" stroke="#FFFFFF" stroke-linecap="round"></line>
+    </g>
+</svg>

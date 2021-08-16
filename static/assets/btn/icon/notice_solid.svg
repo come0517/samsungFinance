@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/icon/notice_solid</title>
+    <g id="btn/icon/notice_solid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" opacity="0.600000024" x="0" y="0" width="16" height="16"></rect>
+        <path d="M16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 5.41083001e-16,12.418278 0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 C12.418278,-8.11624501e-16 16,3.581722 16,8 Z" id="Rectangle" fill="#212121"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="7.25" y="4" width="1.5" height="6" rx="0.75"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="7.25" y="11" width="1.5" height="2" rx="0.75"></rect>
+    </g>
+</svg>
