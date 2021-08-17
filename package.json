@@ -10,12 +10,9 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "test": "jest",
-<<<<<<< HEAD
     "bench:stateless": "ab -c1 -n1000 http://127.0.0.1:3000/guide/index",
-    "bench:stateless-big": "ab -c1 -n500 http://127.0.0.1:3000/stateless-big"
-=======
+    "bench:stateless-big": "ab -c1 -n500 http://127.0.0.1:3000/stateless-big",
     "sb": "nuxt storybook"
->>>>>>> 2c98bd26b59b0a1dc8f68b76cbf7169a3471423b
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
