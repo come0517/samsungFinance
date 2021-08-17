@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+const API_BASE_URL='https://crud-books-api.herokuapp.com/'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -33,6 +35,8 @@ export default {
   plugins: [
     '~/plugins/page.js',
     "~/plugins/mixins.js",
+    '@/plugins/axios',
+    '~/plugins/apexChart.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,6 +50,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -58,7 +63,30 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios'
+  ],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    baseURL: API_BASE_URL,
+    https: false,
+    proxy: false,
+    // proxy: {
+    //   '/product/fund/': 'http://localhost:8080/product/fund',
+    //   '/api2/': 'http://10.0.0.186:8080/product/fund'
+    //   // 프록시 모듈에서 /api/는 API 끝점의 모든 요청에 추가됩니다. 이를 제거하려면 경로 다시 쓰기 옵션 사용해야
+    //   //'/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/': ''} }
+    // },
+    // 실패한 요청을 자동으로 가로채서 설정된 값대로 재시도
+    //retry: { retries: 3 },
+    credentials: false,
+    // get, post ... common Accept header
+    common: {
+      Accept: 'application/json, text/plain, */*'
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -102,12 +130,26 @@ export default {
     decorators: [
       '<v-app><story/></v-app>'
     ],
-    port: 4000
+    port: 4000,
+    stories: [
+      '~/components/Storybook/*/*.stories.js',
+    ],
+    addons: [
+      '@storybook/addon-controls',
+      '@storybook/addon-notes',
+    ]
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
-      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ],
     },
+  },
+
+  googleAnalytics: {
+    // id: 'UA-12301-2', // Used as fallback if no runtime config is provided
   }
 }

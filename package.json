@@ -10,16 +10,31 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "test": "jest",
+<<<<<<< HEAD
     "bench:stateless": "ab -c1 -n1000 http://127.0.0.1:3000/guide/index",
     "bench:stateless-big": "ab -c1 -n500 http://127.0.0.1:3000/stateless-big"
+=======
+    "sb": "nuxt storybook"
+>>>>>>> 2c98bd26b59b0a1dc8f68b76cbf7169a3471423b
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/i18n": "^7.0.2",
     "@nuxtjs/pwa": "^3.3.5",
+    "cookie-universal-nuxt": "^2.1.5",
     "core-js": "^3.15.1",
+    "firebase": "^8.9.0",
+    "js-cookie": "^3.0.0",
     "nuxt": "^2.15.7",
-    "vuetify": "^2.5.5"
+    "nuxt-cookie-control": "^1.9.7",
+    "nuxt-i18n": "^6.28.1",
+    "vue-apexcharts": "^1.6.2",
+    "vue-cookies": "^1.7.4",
+    "vue-perfect-scrollbar": "^0.2.1",
+    "vuedraggable": "^2.24.3",
+    "vuetify": "^2.5.5",
+    "vuex-persistedstate": "^4.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -27,8 +42,14 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/storybook": "^4.1.1",
     "@nuxtjs/vuetify": "^1.12.1",
+    "@storybook/addon-controls": "^6.3.7",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/preset-scss": "^1.0.3",
     "@vue/test-utils": "^1.2.1",
+    "apexcharts": "^3.26.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^27.0.5",
     "eslint": "^7.29.0",
@@ -36,12 +57,19 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "jest": "^27.0.5",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
+    "sass-loader": "^10.1.1",
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4"
   },
   "resolutions": {
     "@babel/core": "7.13.15",
-    "@babel/preset-env": "7.13.15"
+    "@babel/preset-env": "7.13.15",
+    "ts-node": "^10.2.0",
+    "vue-form-wizard": "^0.8.4",
+    "vue-jest": "^3.0.4",
+    "vueperslides": "^2.13.0"
   }
 }
