@@ -41,7 +41,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
-    '~/components/commons/'
+    '~/components/commons/',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -60,12 +60,6 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // '@nuxtjs/auth-next',
-  ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -125,25 +119,11 @@ export default {
       }
     }
   },
-
-  storybook: {
-    decorators: [
-      '<v-app><story/></v-app>'
-    ],
-    port: 4000,
-    stories: [
-      '~/components/Storybook/*/*.stories.js',
-    ],
-    addons: [
-      '@storybook/addon-controls',
-      '@storybook/addon-notes',
-    ]
-  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
       plugins: [
-        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+        // ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ],
     },

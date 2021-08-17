@@ -23,6 +23,8 @@ export default {
       name: '삼성증권 Top Navi - 공통 가이드 ',
     },
   }),
+
+  created: {},
   computed: {
 
   },
