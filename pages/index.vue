@@ -32,7 +32,7 @@ export default {
         {icon: 'mdi-gesture-tap-button', title: 'Buttons', to: '/guides/boxes'},
         {icon: 'mdi-form-textbox-lock', title: 'Form', to: '/guides/forms'},
         {icon: 'mdi-list-status', title: 'Lists', to: '/guides/lists'},
-        {icon: 'mdi-table', title: 'Tables', to: '/guides/tables'},
+        // {icon: 'mdi-table', title: 'Tables', to: '/guides/tables'},
         {icon: 'mdi-layers-triple-outline', title: 'Popups', to: '/guides/popups'},
         // {icon: 'mdi-keyboard', title: 'Keypad', to: '/guides/Keypad'},
       ]
