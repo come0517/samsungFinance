@@ -51,7 +51,6 @@
 <script>
 import AccountNotice from '~/components/account/AccountNotice.vue'
 
-
 export default {
   components: { AccountNotice },
   layout: 'sfip',
