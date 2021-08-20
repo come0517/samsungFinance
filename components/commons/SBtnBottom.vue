@@ -16,7 +16,7 @@
 <script>
 export default {
   created: function () {
-    this.$page.bottomBtn = true;
+    this.$emit('hasBottomButton', true);
   },
   props: {
     text: String,
