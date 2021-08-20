@@ -1,35 +1,19 @@
-/*
-    HTML Reset
-*/
-
-/*
-h1 {
-    font-size: 18px;
-    color: #212121;
-    letter-spacing: -0.9px;
-    line-height: 28px;
-    font-weight: 700;
-  }
-
-  h2 {
-    font-size: 16px;
-    color: #212121;
-    letter-spacing: 0;
-    line-height: 24px;
-    font-weight: 700;
-  }
-
-  h3 {
-    font-size: 14px;
-    color: #212121;
-    letter-spacing: 0;
-    line-height: 22px;
-    font-weight: 700;
-  }
-  */
   section {
     min-height: 90vh;
   }
+
+  h2 {font-size:16px; line-height:24px; font-weight: 700; color: #212121;}
+  h3 {font-size: 14px; color: #212121; letter-spacing: 0; line-height: 22px; font-weight: 700;}
+  h4 {font-size: 12px; color: #414958; letter-spacing: 0; line-height: 18px; font-weight: 700;}
+  footer {
+    background-color: #f4f4f4;
+    p {font-size:12px; line-height:18px; font-weight:500; color: #8B95A1}
+  }
+  /* li {
+
+    font-size: x-small;
+  } */
+
   [class^='fs'] {color:#212121}
   [class^='fs'][class*='-title'] {letter-spacing:-1px;}
   [class^='fs'][class*='-h'],
@@ -41,14 +25,25 @@ h1 {
   .fs-h1 {white-space: pre;}
   .fs-h2 {font-size:16px; line-height:24px; color: #212121;}
   .fs-h3 {font-size:14px; line-height:22px;}
+  .fs-h4 {font-size:13px; line-height:20px; font-weight: 700;}
   .fs-p-emp {font-size:14px}
   .fs-form {font-size:16px; line-height:24px; font-weight:500;}
-  .fs-cap {font-size:12px; line-height:20px; font-weight:500;}
+  .fs-cap {font-size:12px; line-height:20px; font-weight:500; color: #888888}
   .fs-desc {font-size:9px; line-height:15px; color: #666;}
 
   .v-text-field {padding-top:0; margin-top:0;}
   .v-text-field > .v-input__control > .v-input__slot > .v-text-field__slot {display:block;}
-  .v-input .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;}
+  .v-input:not(.v-select) .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;}
+  /* .v-input .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;} */
+  .v-input.v-select .v-label {width: 100%; height: 28px; font-size: 20px; line-height:20px; color:#616161 !important; }
+  .v-radio .v-label {color:#212121 !important; font-weight: 500;}
+  .v-radio.v-radio--is-disabled .v-label {color:#bbbbbb !important; font-weight: 500;}
+
+  .v-input.v-input--checkbox .v-label {font-size:12px; color:#616161 !important; font-weight: 500;}
+
+  .v-input .v-icon.v-icon {font-size: 16px;}
+  .v-radio .v-icon.v-icon {font-size: 24px;}
+
   .v-input .v-label.error--text {color:#616161 !important}
   .v-text-field input {padding:8px 0 11px; font-size:16px; line-height:24px; font-weight:500; color:#000; max-height:43px;}
   .v-text-field__details {min-height:18px;}

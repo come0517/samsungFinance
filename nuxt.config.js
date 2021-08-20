@@ -33,6 +33,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/customVuetify.js',
     '~/plugins/page.js',
     "~/plugins/mixins.js",
     '@/plugins/axios',
@@ -50,7 +51,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -94,7 +95,7 @@ export default {
     treeShake: true,
     customVariables: [
       '~/assets/variables.scss',
-      '~/assets/css/reset.css',
+      '~/assets/css/reset.scss',
     ],
     theme: {
       dark: false,
@@ -105,7 +106,9 @@ export default {
           decrease: '#286EF1',
           warning: '#FF392A',
           error: '#FF392A',
-          hover: '#2058C0'
+          hover: '#2058C0',
+          success: '#286EF1',
+          bg: '#F8F8F8'
         },
         dark: {
           primary: colors.blue.darken2,
@@ -129,7 +132,14 @@ export default {
     },
   },
 
+  googleFonts: {
+    download: true,
+    families: {
+      Roboto: true,
+    }
+  },
+  // FIXME: using .env
   googleAnalytics: {
-    // id: 'UA-12301-2', // Used as fallback if no runtime config is provided
+    id: 'G-C20TXT9LZS'
   }
 }

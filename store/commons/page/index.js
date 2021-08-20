@@ -1,11 +1,22 @@
 export const state = () => ({
-    navi: false,
+  name: '',
+  navi: false,
+  useCancel: false,
+  callbackCancel: () => ({})
 })
 
 
 export const mutations = ({
-  toggleNavi(state) {
-    state.navi = !state.navi
+  setName(state, payload) {
+    state.name = payload ?? ''
+  },
+  toggleNavi(state, payload) {
+    state.navi = payload ?? !state.navi
+
+  },
+  setCancel(state, payload) {
+    state.useCancel = payload ?? !state.useCancel;
+    state.callbackCancel = payload ? payload : () => {};
   }
 })
 

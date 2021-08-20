@@ -16,6 +16,10 @@ $body-font-family: Roboto
 
 $toolbar-content-padding-x: 24px;
 
+// 확장 패널 패딩 제거
+$expansion-panel-header-padding: 0;
+$expansion-panel-content-padding: 0;
+
 // 기타 공통 스타일 적용 (Reset.css 적용 추천)
 // .v-application {
 //   .text-h3 {
@@ -28,4 +32,10 @@ $title-height: 36px;
 $title-scroll-height: 24px;
 $navi-height: 60px;
 $header-height: $title-height + $navi-height;
+
+
+// icon 기본 색상 변경 (radio / checkbox 사용)
+.theme--light.v-icon {
+  color: #bbbbbb
+}
 

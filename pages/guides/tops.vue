@@ -3,10 +3,22 @@
 
     <SSubject :subject="commons.name"/>
 
-    <v-btn class="primary" @click="toggleNavi">네비게이션 영역 있는경우</v-btn>
 
+    <v-subheader>삼성증권 탑 적용</v-subheader>
+    <v-list>
+      <v-list-item>
+    <v-btn
+      :class="this.page.navi ? 'primary' : 'secondary' "
+      @click="toggleNavi">네비게이션 영역 있는경우
+    </v-btn>
+      </v-list-item>
+      <v-list-item>
+    <v-btn
+      :class="this.page.useCancel ? 'primary' : 'secondary' "
+      @click="addCancel">네비게이션 취소</v-btn>
+      </v-list-item>
+    </v-list>
 
-      <v-subheader>삼성증권 탑 적용</v-subheader>
 
   </section>
 
@@ -23,19 +35,22 @@ export default {
       name: '삼성증권 Top Navi - 공통 가이드 ',
     },
   }),
-
-  created: {},
   computed: {
-
+    page: function () {
+      return this.$store.state.commons.page
+    },
   },
   methods: {
     toggleNavi: function () {
       this.$store.commit("commons/page/toggleNavi")
+    },
+    addCancel: function () {
+      this.$store.commit("commons/page/setCancel", this.cancel)
+    },
+    cancel: function () {
+      alert('test');
     }
   },
-  head: function () {
-    return {title: this.commons.name}
-  }
 }
 
 </script>
