@@ -33,16 +33,16 @@
 
   .v-text-field {padding-top:0; margin-top:0;}
   .v-text-field > .v-input__control > .v-input__slot > .v-text-field__slot {display:block;}
-  .v-input:not(.v-select) .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;}
+  // .v-input:not(.v-select) .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;}
   /* .v-input .v-label {position:static !important; display:block; width:100%; height:auto; font-size:13px; line-height:20px; color:#616161 !important; transform:none; transition:none;} */
   .v-input.v-select .v-label {width: 100%; height: 28px; font-size: 20px; line-height:20px; color:#616161 !important; }
   .v-radio .v-label {color:#212121 !important; font-weight: 500;}
   .v-radio.v-radio--is-disabled .v-label {color:#bbbbbb !important; font-weight: 500;}
 
-  .v-input.v-input--checkbox .v-label {font-size:12px; color:#616161 !important; font-weight: 500;}
+  // .v-input.v-input--checkbox .v-label {font-size:12px; color:#616161 !important; font-weight: 500;}
 
-  .v-input .v-icon.v-icon {font-size: 16px;}
-  .v-radio .v-icon.v-icon {font-size: 24px;}
+  // .v-input .v-icon.v-icon {font-size: 16px;}
+  // .v-radio .v-icon.v-icon {font-size: 24px;}
 
   .v-input .v-label.error--text {color:#616161 !important}
   .v-text-field input {padding:8px 0 11px; font-size:16px; line-height:24px; font-weight:500; color:#000; max-height:43px;}

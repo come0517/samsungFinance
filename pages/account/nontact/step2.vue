@@ -1,43 +1,78 @@
 <template>
   <section class="sfip">
-    <s-subject :subject="`빠르고 쉬운 비대면계좌개설\n지금 시작해보세요!`"/>
+    <s-subject :subject="`새로운 투자를 위한\n본인확인을 시작합니다.`"/>
     <v-main class="pl-5 pr-5">
 
-      <h2 class="mb-4">주식거래 + CMA-RP유형</h2>
+      <div class="inp-wrap">
+        <v-text-field
+          :rules="rules.name.ko"
+          label="성명(국문)"
+          max="15"
+          placeholder="한글 최대 15자 입력"
+          persistent-placeholder
+          clearable
+        />
+      </div>
+      <div class="inp-wrap">
+        <v-text-field
+          :rules="rules.name.en"
+          label="성명(영문) *선택"
+          placeholder="성명(영문)을 입력해주세요."
+          persistent-placeholder
+          clearable
+        />
+      </div>
 
-      <v-card
-        color="bg"
-        flat
-        class="mb-12"
-      >
-        <v-card-text>
-          <v-row dense align="center">
-            <v-col cols=2><v-icon>mdi-image</v-icon></v-col>
-            <v-col cols=10>
-              <span class="fs-p">금융상품과 주식투자가 가능한 종합계좌와 자유 입출금 투신CMA 계좌를 한번에 개설 개설할 수 있습니다.</span>
+      <div class="inp-wrap">
+        <v-text-field
+          type="number"
+          :counter=13
+          :rules="rules.personNo"
+          label="주민등록번호"
+          placeholder="‘-’ 없이 13자리 입력"
+          persistent-placeholder
+          clearable
+        />
+      </div>
 
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
 
-      <h2 class="mb-8">계좌개설 준비사항</h2>
+      <div class="inp-wrap">
+        <v-select
+          v-model="mobile"
+          :items="mobileOpt"
+          label="통신사"
+          :multiple="false"
+          append-icon="mdi-chevron-down"
+        ></v-select>
+      </div>
 
-      <ul>
-        <li class="mb-6">
-          <h3>본인명의 휴대폰</h3>
-        </li>
-        <li class="mb-6">
-          <h3>신분증</h3>
-          <span class="fs-p">본인확인 절차에 필요한 주민등록증 또는 운전면허증</span>
-        </li>
 
-        <li class="mb-6">
-          <h3>타 금융기관 계좌</h3>
-          <span class="fs-p">고객님 명의 타금융기관 계좌</span>
-        </li>
-      </ul>
+      <SGroupCheckbox :group="agree.group" :items="agree.items" />
 
+<!--
+    <div class="inp-wrap">
+        <label for="tel01" class="inp-label">휴대폰번호</label>
+        <div class="inp-box">
+            <input type="text" id="tel01" class="inp" placeholder="‘-’ 없이 입력">
+            <button type="button" class="inp-btn">인증번호 요청</button>
+        </div>
+    </div>
+
+    <div class="inp-wrap miss">
+        <label for="confirmNum" class="inp-label">인증번호</label>
+        <div class="inp-box">
+            <input type="text" id="confirmNum" class="inp" placeholder="인증번호 6자리 입력">
+            <button type="button" class="inp-btn">인증확인</button>
+        </div>
+        <div class="inp-bottom">
+            <p class="message">인증번호가 일치하지 않습니다.</p>
+            <div class="inp-time">
+                <span class="txt-time">02:57</span>
+                <button type="button" class="btn-txt">연장하기</button>
+            </div>
+        </div>
+    </div>
+    -->
 
 
       <account-notice />
@@ -46,7 +81,9 @@
   </section>
 </template>
 
+
 <script>
+
 import AccountNotice from '~/components/account/AccountNotice.vue'
 
 
@@ -56,20 +93,53 @@ export default {
   created: function () {
     this.$store.commit("commons/page/toggleNavi", true)
   },
+  computed: {
+      mobileOpt: function () { return ['SKT', 'LGT', 'ADC'] },
+      agreeAll: function () {
+        return Object.values(this.agree).every(item => item)
+      }
+  },
   data () {
     return {
       commons: {
         name: '계좌개설'
       },
-      dialog: false,
-      snackbar: false,
-      text: `계좌번호가 복사되었습니다.`,
+      agree: {
+        group: {
+          label: '휴대폰 인증을 위한 전체 항목에 동의합니다.',
+        },
+        items: [
+          {key: 'a1', label: '(필수) 개인정보 이용 및 제공 동의', value: 'Y', checked: true},
+          {key: 'a2', label: '(필수) 고유식별정보 제공 동의', value: 'Y', checked: true},
+          {key: 'a3', label: '(필수) 통신사 이용약관 동의', value: 'Y', checked: false},
+          {key: 'a4', label: '(필수) 서비스 이용약관 동의', value: 'Y', checked: false},
+        ],
+      },
+      mobile: 'SKT',
+      rules: {
+        commons: {
+          required: value => !!value || '필수로 입력해야합니다.',
+        },
+        name: {
+          ko: [
+            value => !!value || '필수로 입력해야합니다.',
+          ],
+          en: [
+            value => !!value || '필수로 입력해야합니다.',
+          ],
+        },
+        personNo: [
+          value => ! (value && value.length < 13) || '주민번호 13자리를 입력해주세요. ',
+          value => /^[0-9]*$/.test(value) || '숫자만 입력해주세요.',
+        ]
+      }
     }
   },
   methods: {
     doAction: function () {
       this.$router.push('./step3');
-    }
+    },
+
   }
 }
 </script>

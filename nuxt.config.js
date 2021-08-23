@@ -96,6 +96,7 @@ export default {
     customVariables: [
       '~/assets/variables.scss',
       '~/assets/css/reset.scss',
+      // '~/assets/css/common.scss',
     ],
     theme: {
       dark: false,
