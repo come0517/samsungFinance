@@ -1,3 +1,8 @@
 <template>
-  <s-subject :subject="`주민등록증 또는 운전면허증을\n촬영해주세요.`"/>
+  <section class="sfip">
+    <s-subject :subject="`주민등록증 또는 운전면허증을\n촬영해주세요.`"/>
+
+    <account-notice />
+    <s-btn-bottom :text="'다음'" :doAction="doAction"/>
+  </section>
 </template>

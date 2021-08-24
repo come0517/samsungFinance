@@ -46,34 +46,40 @@
         ></v-select>
       </div>
 
-
       <SGroupCheckbox :group="agree.group" :items="agree.items" />
 
+
+
+      <div class="inp-wrap">
+        <mobile-auth />
+
+      </div>
+
 <!--
-    <div class="inp-wrap">
-        <label for="tel01" class="inp-label">휴대폰번호</label>
-        <div class="inp-box">
-            <input type="text" id="tel01" class="inp" placeholder="‘-’ 없이 입력">
-            <button type="button" class="inp-btn">인증번호 요청</button>
-        </div>
-    </div>
+      <div class="inp-wrap">
+          <label for="tel01" class="inp-label">휴대폰번호</label>
+          <div class="inp-box">
+              <input type="text" id="tel01" class="inp" placeholder="‘-’ 없이 입력">
+              <button type="button" class="inp-btn">인증번호 요청</button>
+          </div>
+      </div>
 
-    <div class="inp-wrap miss">
-        <label for="confirmNum" class="inp-label">인증번호</label>
-        <div class="inp-box">
-            <input type="text" id="confirmNum" class="inp" placeholder="인증번호 6자리 입력">
-            <button type="button" class="inp-btn">인증확인</button>
-        </div>
-        <div class="inp-bottom">
-            <p class="message">인증번호가 일치하지 않습니다.</p>
-            <div class="inp-time">
-                <span class="txt-time">02:57</span>
-                <button type="button" class="btn-txt">연장하기</button>
-            </div>
-        </div>
-    </div>
-    -->
+      <div class="inp-wrap miss">
+          <label for="confirmNum" class="inp-label">인증번호</label>
+          <div class="inp-box">
+              <input type="text" id="confirmNum" class="inp" placeholder="인증번호 6자리 입력">
+              <button type="button" class="inp-btn">인증확인</button>
+          </div>
+          <div class="inp-bottom">
+              <p class="message">인증번호가 일치하지 않습니다.</p>
+              <div class="inp-time">
+                  <span class="txt-time">02:57</span>
+                  <button type="button" class="btn-txt">연장하기</button>
+              </div>
+          </div>
+      </div>
 
+-->
 
       <account-notice />
       <s-btn-bottom :text="'다음'" :doAction="doAction"/>
@@ -85,10 +91,11 @@
 <script>
 
 import AccountNotice from '~/components/account/AccountNotice.vue'
+import MobileAuth from '~/components/account/MobileAuth.vue'
 
 
 export default {
-  components: { AccountNotice },
+  components: { AccountNotice, MobileAuth },
   layout: 'sfip',
   created: function () {
     this.$store.commit("commons/page/toggleNavi", true)
