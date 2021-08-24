@@ -1,4 +1,4 @@
-  section {
+   section {
     min-height: 90vh;
   }
 
@@ -21,6 +21,8 @@
   [class^='fs'][class*='-p'] {font-size:13px; font-weight:500; line-height:22px;}
   .fs-title-1 {font-size:24px; line-height:32px;}
   .fs-title-2 {font-size:20px; line-height:30px;}
+  .fs-title-3 {font-size:22px; line-height:30px;}
+  .fs-title-4 {font-size:17px; line-height:24px;}
   .fs-h1 {font-size:18px; line-height:1.5em; letter-spacing:-.9px;}
   .fs-h1 {white-space: pre;}
   .fs-h2 {font-size:16px; line-height:24px; color: #212121;}
@@ -57,3 +59,141 @@
   .v-input__icon--clear .mdi-close::after {font-size:12px; color:#fff}
   .v-text-field > .v-input__control > .v-input__slot:after {border-color:#212121; background-color:#212121;}
 
+  /* reset */
+  .container {padding: 0;}
+  .v-application p { margin-bottom: 0;}
+
+  /* layout */
+  .cont-wrap {
+    padding: 0 20px 50px;
+    border-top: 12px solid #F8F9F9;
+  }
+  .cont-wrap:first-child {
+    border-top: 0;
+  }
+
+  /* 마이자산 */
+  .myassets .chat-wrap .bubble {
+    display: flex;
+    height: 46px;
+  }
+  .myassets .chat-wrap .bubble p {
+    padding: 0 22px;
+    font-size: 15px;
+    line-height: 46px;
+    background: #EEF0F3;
+  }
+  .myassets .chat-wrap .bubble .v-image {
+    flex: 0 0 auto;
+  }
+  .myassets .chat-wrap .card {
+    margin: 18px 0;
+    padding: 35px 22px 30px; 
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.06), 0 6px 18px 2px rgba(0,0,0,0.04);
+    border-radius: 20px;
+  }
+  .myassets .chat-wrap .card .img {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    text-align: right;
+  }
+  .myassets .chat-wrap .card .img .v-responsive {
+    flex: 0 0 auto;
+  }
+  .myassets .chat-wrap .card .btn {
+    padding: 0;
+    font-size: 17px;
+    color: #000;
+  }
+  .myassets .chat-wrap .card .btn i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    border-radius: 24px;
+    background: #000;
+  }
+  .myassets .main-card {
+    margin: 20px 0;
+    padding: 20px 24px;
+    color: #fff;
+    background: #0068FF;
+  }
+  .myassets .main-card span {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .myassets .main-card .price {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .myassets .main-card .price.before {
+    opacity: 0.4;
+    text-decoration: line-through;
+  }
+  .myassets .etc-card {
+    margin-top: 50px;
+    padding: 24px;
+  }
+  .myassets .etc-card .col {
+    position: relative;
+  }
+  .myassets .etc-card .col + .col:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 1px;
+    height: 48px;
+    background: #E6E6E6;
+  }  
+  .myassets .etc-card .col span {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+  }  
+  .myassets .etc-card .col .percent {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  .txt-judge {
+    font-size: 14px;
+    color: #868A93;
+    line-height: 20px;
+  }
+  .txt-info {
+    font-size: 14px;
+    line-height: 20px;
+    color: #868A93;
+  }
+  .txt-info i {
+    margin-right: 10px;
+  }
+  .acco-icon .v-expansion-panel{
+    border-top: 1px solid #F5F6F7;
+  }
+  .acco-icon .v-expansion-panel:first-child {
+    border-top: 0;
+  }
+  .acco-icon .v-expansion-panel-header {
+    min-height: 60px;
+  }
+  .acco-icon .v-expansion-panel-header [class^='ico'] {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    border-radius: 24px;
+    vertical-align: middle;
+    background: #ddd;
+  }
+  .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {
+    color: #000;
+  }
+  .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon:before{
+    font-size: 16px;
+  }
