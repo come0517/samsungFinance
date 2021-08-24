@@ -72,6 +72,81 @@
     border-top: 0;
   }
 
+  /* common */
+  .txt-judge {
+    font-size: 14px;
+    color: #868A93;
+    line-height: 20px;
+  }
+  .txt-info {
+    font-size: 14px;
+    line-height: 20px;
+    color: #868A93;
+  }
+  .txt-info i { margin-right: 10px;}
+
+  .bul-list {
+    padding-left: 0 !important;
+  }
+  .bul-list li {
+    padding-left: 13px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none;
+    color: #868A93;
+  }
+  .bul-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px; left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background: #868A93;
+  }
+  .bul-list.type-warning li {
+    color: #FF6060;
+    font-size: 15px;
+  }
+  .bul-list.type-warning li:before {background: #FF6060;}  
+  .bul-list.type-black li {
+    color: #0B0D0F;
+    font-size: 15px;
+  }  
+  .bul-list.type-black li:before {background: #0B0D0F;}
+  
+  .tab-base.v-tabs {
+    position: relative;
+    margin-top: 10px;
+  }
+  .tab-base.v-tabs .v-item-group:before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: -20px;
+    display: block;
+    width: calc(100% + 40px);
+    height: 1px;
+    background: #E9ECEE;
+  }
+  .tab-base.v-tabs .v-tabs-slider-wrapper,
+  .tab-base.v-tabs .v-tab {
+    min-width: auto;
+    padding: 0;
+  }
+  .tab-base.v-tabs .v-tab {
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #B4B9C3 !important;
+  }
+  .tab-base.v-tabs .v-tab--active {
+    color: #0B0D0F !important;
+  }
+  .tab-base.v-tabs + .v-tabs-items { padding-top: 10px;}
+
   /* 마이자산 */
   .myassets .chat-wrap .bubble {
     display: flex;
@@ -119,6 +194,7 @@
     padding: 20px 24px;
     color: #fff;
     background: #0068FF;
+    border-radius: 16px;
   }
   .myassets .main-card span {
     font-size: 15px;
@@ -135,6 +211,7 @@
   .myassets .etc-card {
     margin-top: 50px;
     padding: 24px;
+    border-radius: 16px;
   }
   .myassets .etc-card .col {
     position: relative;
@@ -158,19 +235,7 @@
     line-height: 30px;
     font-weight: bold;
   }
-  .txt-judge {
-    font-size: 14px;
-    color: #868A93;
-    line-height: 20px;
-  }
-  .txt-info {
-    font-size: 14px;
-    line-height: 20px;
-    color: #868A93;
-  }
-  .txt-info i {
-    margin-right: 10px;
-  }
+  
   .acco-icon .v-expansion-panel{
     border-top: 1px solid #F5F6F7;
   }
@@ -189,11 +254,173 @@
     margin-right: 16px;
     border-radius: 24px;
     vertical-align: middle;
-    background: #ddd;
+    background: gray;
   }
-  .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {
-    color: #000;
+  .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {color: #000;}
+  .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon:before{font-size: 16px;}
+  .txt-dl {margin-top: 40px;}  
+  .txt-dl:first-child { margin-top: 30px;}
+  .txt-dl dt { 
+    font-size: 15px;
+    color: #7E89A2;
+    font-weight: 700;
   }
-  .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon:before{
-    font-size: 16px;
+  .txt-dl dd {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .txt-dl dd .row {justify-content: space-between;}
+  .txt-dl dd .row .tit {font-size: 17px;}
+  .txt-dl dd .row .txt-percent {
+    font-size: 15px;
+    text-align: right;
+    color: #5A5B63;
+  }
+  .help-wrap p{
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .help-wrap a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3D9BFC;
+    text-decoration: none;
+  }  
+  .help-wrap a .ico {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: gray;
+  }
+
+  .asset-total .fs-title-4 strong { color: #0068FF;}
+  .asset-total .total {
+    font-size: 28px;
+    color: #1F2023;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  .asset-total .total .v-btn {
+    padding: 0;
+  }
+  .asset-total .break-even {
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .link-wrap {
+    margin-top: 30px;
+    border-top: 1px solid #F5F6F7;
+  }
+  .link-wrap .btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 17px;
+    color: #0B0D0F;
+    text-decoration: none;
+  }
+  .link-wrap .btn .v-icon {
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+  }
+  .card-account.no-data {
+    padding: 90px 0;
+    font-size: 15px;
+    color: #868A93;
+    text-align: center;
+  }
+  .card-account.no-data:before {
+    content:'';
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 9px;
+    background: gray;
+  }
+  .card-account .v-card {
+    padding: 0 24px;
+    background: #F9FAFB;
+    border: 1px solid #F7F8F9;
+    border-radius: 16px;
+  }
+  .card-account .v-card .v-list-item{padding: 0;}
+  .card-account .v-card .v-list-item__content {
+    padding: 0 0 24px;
+  }
+  .card-account .v-card .v-list-item + .v-list-item{
+    padding-top: 24px;
+    border-top: 1px solid #E9ECEE;
+  }
+  .card-account .v-card .tit {
+    font-size: 15px;
+    color: #0B0D0F;
+    line-height: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+  }
+  .card-account .v-card .tit-wrap {
+    position: relative;
+  }
+  .card-account .v-card .tit-wrap .tit,
+  .card-account .v-card .tit-wrap .account-num {
+    padding: 18px 0;
+    width: auto;
+  }
+  .card-account .v-card .tit-wrap.type2 {
+    margin-bottom: 24px;
+  }
+  .card-account .v-card .tit-wrap.type2:before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0; left: -24px;
+    width: calc(100% + 48px);
+    height: 1px;
+    background:#E9ECEE;
+  }
+  .card-account .v-card .tit-wrap .account-num {
+    font-size: 14px;
+    color: #868A93;
+    line-height: 20px;
+  }
+  .card-account .v-card .price-info .total {
+    font-size: 18px;
+    color: #0B0D0F;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  .card-account .v-card .price-info .break-even {
+    margin-top: 2px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .myassets .break-even .v-icon {margin-left: 8px;}
+  .myassets .break-even.minus,
+  .myassets .break-even.minus .v-icon {color: #F50057;}
+  .myassets .break-even.plus,
+  .myassets .break-even.plus .v-icon {color: #286EF1;}
+  .card-account .v-card .v-card__actions {
+    padding: 7px 0;
+    border-top:  1px solid #E9ECEE;
+  }
+  .card-account .v-card .v-card__actions .txt-sub {
+    font-size: 14px;
+    color: #868A93;
+    line-height: 18px;
+  }
+  .card-account .v-card .v-card__actions .v-btn--text {
+    padding: 0;
+    font-size: 14px; 
+    color: #5E5E5E;
   }
