@@ -11,7 +11,7 @@
       >
         <template v-for="(item, index) in items">
           <v-list-item :key="item.key" :ripple="false" >
-            <template v-slot:default="{ active }">
+            <template #default>
               <v-list-item-content :ripple="false" >
                 <v-list-item-title :ripple="false" v-text="item.text"/>
               </v-list-item-content>

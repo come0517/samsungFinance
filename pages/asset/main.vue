@@ -14,8 +14,8 @@
                             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
                             width="180px"
                             height="122px"
-                        ></v-img> 
-                    </div>                        
+                        ></v-img>
+                    </div>
                     <v-btn text class="btn">비대면계좌개설 시작하기 <i class="ico"></i></v-btn>
                 </div>
                 <div class="bubble justify-end">
@@ -23,7 +23,7 @@
                         src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
                         width="62px"
                         height="46px"
-                    ></v-img> 
+                    ></v-img>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                 </v-row>
             </v-card>
             <p class="txt-info"><v-icon small color="#bbb">mdi-information</v-icon>우대 수수료율은 유의사항 참고</p>
-            
+
             <v-card class="etc-card" color="bg" flat>
                 <h3 class="fs-h1">비대면 계좌의 신용융자이자율은 <br>지점/은행연계 계좌보다 높습니다.</h3>
                 <v-row class="mt-5">
@@ -160,7 +160,7 @@
                                 </ul>
                             </dd>
                         </dl>
-                        
+
                         <div class="help-wrap">
                             <h4>계좌 개설 도움이 필요하신가요?</h4>
                             <p>평생 혜택 전용 상담번호로 연락주세요.</p>
@@ -209,8 +209,15 @@
                     </v-expansion-panel-content>
                 </v-expansion-panel>
             </v-expansion-panels>
-            
+
         </div>
-    </v-main> 
+    </v-main>
   </section>
 </template>
+
+
+<script>
+export default {
+  layout: 'sfip',
+}
+</script>

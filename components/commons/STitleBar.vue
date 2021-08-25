@@ -71,7 +71,7 @@
         </v-row>
       </div>
 <!-- FIXME: 템플릿 겹치면 오류 발생....  이상함 확인 필요 -->
-<!--
+
       <template #extension v-if="page.navi">
         <div class="s-title-bar">
           <v-row
@@ -98,7 +98,7 @@
           </v-row>
         </div>
 
-      </template> -->
+      </template>
     </v-app-bar>
 
     <div style="min-height: 90hv;">
