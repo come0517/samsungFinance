@@ -1,6 +1,6 @@
 <template>
   <section class="sfip">
-    <s-subject :subject="this.commons.name"/>
+    <s-subject :subject="`Popup`"/>
 
     <v-list>
       <v-list-item>
@@ -98,18 +98,97 @@
           <v-list-item-title>
             <v-btn
               color="secondary"
-              @click="snackbar = true"
+              @click="snackbar1 = true"
             >
               Toast Popup
             </v-btn>
             <v-snackbar
-              v-model="snackbar"
-              :timeout="-1"
+              v-model="snackbar1"
+              :timeout="2000"
               rounded="pill"
               color="grey darken-2"
             >
               <div style="text-align: center;"  @click="snackbar = false">{{ text }}</div>
             </v-snackbar>
+
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>
+            <v-btn
+              color="secondary"
+              @click="snackbar2 = true"
+            >
+              Toast Popup (강조)
+            </v-btn>
+            <v-snackbar
+              v-model="snackbar2"
+              :timeout="2000"
+              rounded="pill"
+              color="primary"
+            >
+              <div style="text-align: center;"  @click="snackbar = false">{{ text }}</div>
+            </v-snackbar>
+
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>
+            <v-btn
+              color="secondary"
+              @click="snackbar3 = true"
+            >
+              Toast Popup (오류)
+            </v-btn>
+            <v-snackbar
+              v-model="snackbar3"
+              :timeout="2000"
+              rounded="pill"
+              color="error"
+            >
+              <div style="text-align: center;"  @click="snackbar = false">{{ text }}</div>
+            </v-snackbar>
+
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>
+
+            <v-bottom-sheet
+              v-model="dialog1"
+              persistent
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  color=""
+                  dark
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  Dimm Layer 레이아웃 열기 (Bottom)
+                </v-btn>
+              </template>
+              <v-sheet
+                class="text-center mb-5"
+                min-height="150px"
+              >
+
+                <div class="py-3">
+                  <p class="fs-h1">인증번호 1회 오류 입니다.</p>
+                </div>
+              </v-sheet>
+
+              <v-footer :fixed=true :padless=true >
+                <v-btn block tile color="primary" @click="dialog1 = false">확인</v-btn>
+              </v-footer>
+
+            </v-bottom-sheet>
 
           </v-list-item-title>
         </v-list-item-content>
@@ -130,8 +209,14 @@ export default {
         name: 'Popup'
       },
       dialog: false,
-      snackbar: false,
+      snackbar1: false,
+      snackbar2: false,
+      snackbar3: false,
       text: `계좌번호가 복사되었습니다.`,
+      dialog1: false,
+      notifications: false,
+      sound: true,
+      widgets: false,
     }
   },
 }
