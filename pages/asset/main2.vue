@@ -9,7 +9,7 @@
                     <span>20,327,000</span>원
                     <v-btn icon width="24" color="#ccc"><v-icon>mdi-information-outline</v-icon></v-btn>
                 </div>
-                <div class="break-even minus mt-4">
+                <div class="break-even plus mt-4">
                     <span><span>230,489</span>원</span><v-icon small>mdi-menu-up</v-icon><strong>10.31%</strong>
                 </div>
             </div>
@@ -34,8 +34,9 @@
             </v-tabs>
             <v-tabs-items v-model="tab">
                 <v-tab-item>
-                    <div class="card-account no-data">
-                        <p>투자 중인 상품이 없습니다</p>
+                    <div class="no-data">
+                        <i class="ico"></i>
+                        <p class="txt">투자 중인 상품이 없습니다</p>
                     </div>
                     <div class="card-account mt-5">
                         <v-card outlined>
@@ -53,7 +54,7 @@
                                     </div>
                                     <div class="price-info">
                                         <div class="total"><span>12,568,000</span>원</div>
-                                        <div class="break-even minus">
+                                        <div class="break-even plus">
                                             <span><span>+230,489</span>원</span><v-icon small>mdi-menu-up</v-icon><strong>10.31%</strong>
                                         </div>
                                     </div>
@@ -87,7 +88,7 @@
                                     </div>
                                     <div class="price-info">
                                         <div class="total"><span>12,568,000</span>원</div>
-                                        <div class="break-even plus">
+                                        <div class="break-even minus">
                                             <span><span>+230,489</span>원</span><v-icon small>mdi-menu-down</v-icon><strong>10.31%</strong>
                                         </div>
                                     </div>
@@ -114,7 +115,7 @@
                                     <div class="tit"><strong>[펀드]</strong></div>
                                     <div class="price-info">
                                         <div class="total"><span>12,568,000</span>원</div>
-                                        <div class="break-even plus">
+                                        <div class="break-even minus">
                                             <span><span>+230,489</span>원</span><v-icon small>mdi-menu-down</v-icon><strong>10.31%</strong>
                                         </div>
                                     </div>
