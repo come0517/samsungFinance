@@ -95,6 +95,7 @@
 export default {
 
   layout: 'sfip',
+  transition: 'page',
   created: function () {
     this.$store.commit("commons/page/toggleNavi", true)
   },

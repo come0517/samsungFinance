@@ -1,133 +1,64 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="`${item.title}`" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
+    <STitleBar>
+
+    </STitleBar>
     <v-main>
-      <v-container>
+      <v-container class="mb-8" style="min-height: 100hv;padding-top: 114px;">
         <Nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+
+    <v-footer :class="`${hasBottomButton ? 'pb-16' : 'pb-0'} pl-8 pr-8`">
+      <v-main>
+      <p>
+        삼성증권에서 제공하는 투자 정보는 고객의 판단을 위한 단순 참고용일뿐, 투자 제안 및 권유∙종목 추천을 위해 작성된 것이 아닙니다.
+      </p>
+      <p>
+        본 화면은 삼성증권이 제공하는 것으로 삼성카드와는 무관합니다.
+      </p>
+      <h4>개인정보처리방침</h4>
+      <v-row dense no-gutters>
+        <v-col><span class="fs-cap">신용정보 활용체계</span></v-col>
+        <v-col><span class="fs-cap">전자금융거래약관</span></v-col>
+        <v-col><span class="fs-cap">고객확인의무</span></v-col>
+      </v-row>
+      <slot/>
+      </v-main>
     </v-footer>
   </v-app>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'main',
-          to: '/'
-        },
-        {
-          icon: 'mdi-apps',
-          title: 'fund',
-          to: '/fund/list'
-        },
-        {
-          icon: 'mdi-apps',
-          title: 'pop',
-          to: '/pop/list'
-        },
-        // {
-        //   icon: 'mdi-apps',
-        //   title: 'charts',
-        //   // to: '/app/charts/apexChart/ApexAreaChart'
-        // },
 
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+
+<style lang="scss" scoped>
+@import "~/assets/css/transition.scss";
+</style>
+
+
+<script>
+
+export default {
+  // props: {
+  //   hasBottomButton: Boolean
+  // },
+  created: function() {
+    //console.log("layout created", this.commons)
+  },
+  mounted: function() {
+    //console.log("layout mounted", this.commons)
+  },
+  data: function () {
+    //console.log('this.$page.bottomPadding', this.$page.bottomPadding );
+    return {
+      bottomPadding: this.$page.bottomPadding ?? false
+    }
+  },
+  methods: {
+    hasBottomButton: function (bool) {
+      return bool ?? false;
     }
   }
 }
+
 </script>

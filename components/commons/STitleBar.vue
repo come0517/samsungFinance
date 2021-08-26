@@ -142,7 +142,9 @@ export default {
       this.prominent = true;
     },
     cancel: function () {
-      this.page.callbackCancel();
+      console.log("this.page.callbackCancel", this.page.callbackCancel)
+      this.page.callbackCancel ? this.page.callbackCancel() : '';
+      //this.page.callbackCancel();
     }
   }
 }

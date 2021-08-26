@@ -1,12 +1,13 @@
 <template>
   <v-app dark>
     <STitleBar>
-      <v-main>
-        <v-container class="mb-8" style="min-height: 100hv;padding-top: 114px;">
-          <Nuxt />
-        </v-container>
-      </v-main>
+
     </STitleBar>
+    <v-main>
+      <v-container class="mb-8" style="min-height: 100hv;padding-top: 114px;">
+        <Nuxt />
+      </v-container>
+    </v-main>
 
     <v-footer :class="`${hasBottomButton ? 'pb-16' : 'pb-0'} pl-8 pr-8`">
       <v-main>
@@ -29,19 +30,11 @@
 </template>
 
 
+
 <style lang="scss" scoped>
-
-.slide-bottom-enter-active,
-.slide-bottom-leave-active {
-  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
-}
-.slide-bottom-enter,
-.slide-bottom-leave-to {
-  opacity: 0;
-  transform: translate3d(0, 15px, 0);
-}
-
+@import "~/assets/css/transition.scss";
 </style>
+
 
 <script>
 
@@ -56,7 +49,7 @@ export default {
     //console.log("layout mounted", this.commons)
   },
   data: function () {
-    console.log('this.$page.bottomPadding', this.$page.bottomPadding );
+    //console.log('this.$page.bottomPadding', this.$page.bottomPadding );
     return {
       bottomPadding: this.$page.bottomPadding ?? false
     }

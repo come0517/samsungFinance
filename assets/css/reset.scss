@@ -1,5 +1,6 @@
    section {
     min-height: 90vh;
+
   }
 
   h2 {font-size:16px; line-height:24px; font-weight: 700; color: #212121;}
@@ -121,13 +122,13 @@
     color: #FF6060;
     font-size: 15px;
   }
-  .bul-list.type-warning li:before {background: #FF6060;}  
+  .bul-list.type-warning li:before {background: #FF6060;}
   .bul-list.type-black li {
     color: #0B0D0F;
     font-size: 15px;
-  }  
+  }
   .bul-list.type-black li:before {background: #0B0D0F;}
-  
+
   .tab-base.v-tabs {
     position: relative;
     margin-top: 10px;
@@ -194,7 +195,7 @@
 
   .tab-btn-type .v-slide-group__prev,
   .tab-btn-type .v-slide-group__next { display: none !important}
-  .tab-btn-type .v-tab { 
+  .tab-btn-type .v-tab {
     margin: 0 4px;
     padding: 8px 16px;
     min-width: auto;
@@ -243,7 +244,7 @@
     border-collapse:separate;
     border-spacing:0;
     border-top: 1px solid #ddd;
-  }  
+  }
   .tbl-detail thead th {
     height: 40px;
     padding: 15px 0;
@@ -284,7 +285,7 @@
   }
   .tbl-detail tbody th .badge.type2 span {
     color: #286EF1;
-    border-color: #286EF1; 
+    border-color: #286EF1;
   }
   .tbl-detail tbody th .name {
     width: 124px;
@@ -309,7 +310,7 @@
     position:sticky;
     top:0; left:-10px;
     background: #fff;
-    border-bottom: 1px solid #eee;; 
+    border-bottom: 1px solid #eee;;
   }
   /* 마이자산 */
   .myassets .chat-wrap .bubble {
@@ -327,7 +328,7 @@
   }
   .myassets .chat-wrap .card {
     margin: 18px 0;
-    padding: 35px 22px 30px; 
+    padding: 35px 22px 30px;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.06), 0 6px 18px 2px rgba(0,0,0,0.04);
     border-radius: 20px;
   }
@@ -388,18 +389,18 @@
     width: 1px;
     height: 48px;
     background: #E6E6E6;
-  }  
+  }
   .myassets .etc-card .col span {
     display: block;
     font-size: 15px;
     line-height: 20px;
-  }  
+  }
   .myassets .etc-card .col .percent {
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
   }
-  
+
   .acco-icon .v-expansion-panel{
     border-top: 1px solid #F5F6F7;
   }
@@ -422,9 +423,9 @@
   }
   .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {color: #000;}
   .acco-icon .v-expansion-panel-header .v-expansion-panel-header__icon:before{font-size: 16px;}
-  .txt-dl {margin-top: 40px;}  
+  .txt-dl {margin-top: 40px;}
   .txt-dl:first-child { margin-top: 30px;}
-  .txt-dl dt { 
+  .txt-dl dt {
     font-size: 15px;
     color: #7E89A2;
     font-weight: 700;
@@ -453,7 +454,7 @@
     font-weight: 700;
     color: #3D9BFC;
     text-decoration: none;
-  }  
+  }
   .help-wrap a .ico {
     display: inline-block;
     width: 24px;
@@ -495,7 +496,7 @@
     right: 0; top: 50%;
     transform: translateY(-50%);
   }
-  
+
   .card-account .v-card {
     padding: 0 24px;
     background: #F9FAFB;
@@ -572,7 +573,7 @@
   }
   .card-account .v-card .v-card__actions .v-btn--text {
     padding: 0;
-    font-size: 14px; 
+    font-size: 14px;
     color: #5E5E5E;
   }
 
@@ -621,7 +622,7 @@
   }
   .price-wrap .detail span {color: #888; font-weight: 500; margin-right: 4px;}
   .price-wrap .detail .plus {color: #FF4058; font-weight: 500;}
-  
+
   .card-account2 {
     margin: 10px;
     padding: 20px 22px;
@@ -646,7 +647,7 @@
   }
   .sort-wrap > div {max-width: 160px;}
   .sort-wrap .v-text-field input { text-align: right; font-size: 13px;}
-  
+
   .info-style {
     padding-top: 10px;
   }
@@ -663,3 +664,37 @@
   }
   .info-style dd {color: #212121;}
   .price-wrap + .info-style {border-top: 1px solid #eee;}
+
+
+
+
+
+
+  .layout-enter-active, .layout-leave-active { transition: opacity .5s; }
+  .layout-enter, .layout-leave-active { opacity: 0; }
+
+  .page-enter-active, .page-leave-active {
+    position:absolute;
+    max-width:725.328px; /*make sur our content keep it's original width*/
+    transition: all .2s ease;
+  }
+
+  /* entering start */
+  .page-enter {
+    left: -100%;
+  }
+
+  /* entering end */
+  .page-enter-to {
+    left: 0;
+  }
+
+  /* leaving start */
+  .page-leave {
+    opacity: 1;
+  }
+
+  /* leaving end */
+  .page-leave-to {
+    opacity: 0;
+  }

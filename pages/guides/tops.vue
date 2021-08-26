@@ -45,7 +45,7 @@ export default {
       this.$store.commit("commons/page/toggleNavi")
     },
     addCancel: function () {
-      this.$store.commit("commons/page/setCancel", this.cancel)
+      this.$store.commit("commons/page/setCancel", this.useCancel)
     },
     cancel: function () {
       alert('test');
