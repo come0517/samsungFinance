@@ -1,8 +1,8 @@
 <template>
   <section class="sfip">
-    <v-main class="myassets">
+    <v-main>
 
-        <div class="cont-wrap2">
+        <div class="cont-wrap">
             <div class="acccount-detail">
                 <div class="d-flex justify-space-between">
                     <div class="account-name">
@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="cont-wrap2 pt-6 px-0">
+        <div class="cont-wrap pt-6 px-0">
             <div>
                 <v-tabs
                     v-model="tab"

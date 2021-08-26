@@ -64,18 +64,19 @@
   .v-application p { margin-bottom: 0;}
 
   /* layout */
-  .cont-wrap {
+  .myassets {color: #0B0D0F;}
+  .myassets .cont-wrap {
     padding: 0 20px 50px;
     border-top: 12px solid #F8F9F9;
   }
-  .cont-wrap:first-child {
+  .myassets .cont-wrap:first-child {
     border-top: 0;
   }
-  .cont-wrap2 {
+  .cont-wrap {
     padding: 0 32px;
-    border-top: 6px solid #F8F9F9;
+    border-top: 6px solid #eee;
   }
-  .cont-wrap2:first-child {
+  .cont-wrap:first-child {
     border-top: 0;
   }
 
@@ -233,6 +234,23 @@
     background: gray;
   }
 
+  .tbl-base table {
+    width: 100%;
+    border-spacing: 0;
+    border-top: 1px solid #212121;;
+  }
+  .tbl-base tbody th,
+  .tbl-base tbody td {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+    color: #616161;
+    line-height: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .tbl-base tbody th {background: #F8F8F8;}
+  .tbl-base tbody td {border-left: 1px solid #ddd;}
+
   .tbl-detail {
     padding-left: 10px;
     padding-top: 1px;
@@ -269,10 +287,10 @@
     vertical-align: bottom;
     border-bottom: 1px solid #eee;
   }
-  .tbl-detail tbody th .badge {
+  .tbl-detail tbody th .chip {
     margin-bottom: 8px;
   }
-  .tbl-detail tbody th .badge span {
+  .tbl-detail tbody th .chip span {
     display: inline-block;
     height: 20px;
     line-height: 20px;
@@ -282,9 +300,13 @@
     border: 1px solid #212121;
     border-radius: 4px;
   }
-  .tbl-detail tbody th .badge.type2 span {
+  .tbl-detail tbody th .chip.type2 span {
     color: #286EF1;
     border-color: #286EF1; 
+  }
+  .tbl-detail tbody th .chip.type3 span {
+    color: #FF4058;
+    border-color: #FF4058; 
   }
   .tbl-detail tbody th .name {
     width: 124px;
@@ -311,7 +333,8 @@
     background: #fff;
     border-bottom: 1px solid #eee;; 
   }
-  /* 마이자산 */
+  /* 마이자산 증권메인 (스타일 다름)*/
+  .myassets [class^=fs] {color: #0B0D0F;}
   .myassets .chat-wrap .bubble {
     display: flex;
     height: 46px;
@@ -330,7 +353,7 @@
     padding: 35px 22px 30px; 
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.06), 0 6px 18px 2px rgba(0,0,0,0.04);
     border-radius: 20px;
-  }
+  }  
   .myassets .chat-wrap .card .img {
     display: flex;
     justify-content: flex-end;
@@ -375,6 +398,7 @@
   .myassets .etc-card {
     margin-top: 50px;
     padding: 24px;
+    color: #0B0D0F;
     border-radius: 16px;
   }
   .myassets .etc-card .col {
@@ -432,6 +456,7 @@
   .txt-dl dd {
     margin-top: 20px;
     font-size: 15px;
+    color: #0B0D0F;
     line-height: 20px;
   }
   .txt-dl dd .row {justify-content: space-between;}
@@ -505,6 +530,7 @@
   .card-account .v-card .v-list-item{padding: 0;}
   .card-account .v-card .v-list-item__content {
     padding: 0 0 24px;
+    overflow: visible;
   }
   .card-account .v-card .v-list-item + .v-list-item{
     padding-top: 24px;
@@ -663,3 +689,73 @@
   }
   .info-style dd {color: #212121;}
   .price-wrap + .info-style {border-top: 1px solid #eee;}
+  .cont-wrap .list-style,
+  .cont-wrap .btn-list-style { margin: 16px -22px 0;}
+  .list-style .v-list-item--link {
+    margin-top: 8px;
+    padding: 0 22px;
+    background: #F8F8F8;
+    border-radius: 4px;
+  }
+  .list-style .v-list-item--link:first-child {margin-top:0}
+  .list-style .v-list-item--link .v-list-item__title {font-size: 13px; color: #212121;}
+  .btn-list-style .v-btn.v-size--default {
+    padding: 0 22px;
+    background: #F8F8F8;
+    border-radius: 4px;
+  }
+  .btn-list-style .v-btn__content {
+    position: relative;
+    padding-left: 28px;
+    justify-content: space-between;
+  }
+  .btn-list-style .v-btn__content:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: gray;
+  }
+
+  .list-invest .v-list-item {
+    padding: 24px 32px;
+    border-bottom: 1px solid #eee;
+  }
+  .list-invest .v-list-item__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list-invest .v-list-item__title .date {
+    font-size: 13px;
+    color: #888;
+  }
+  .list-invest .v-list-item__title .chip {
+    width: 37px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 11px;
+    color: #FF4058;
+    font-weight: 700;
+    border: 1px solid #FF4058;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .list-invest .v-list-item__title .chip.type2 {
+    color: #286EF1;
+    border-color: #286EF1;
+  }
+  .list-invest .v-list-item__title .chip.type3 {
+    color: #212121;
+    border-color: #212121;
+  }
+  .list-invest .v-list-item__subtitle {
+    margin-top: 16px;
+    font-size: 20px;
+    color: #212121 !important;
+    text-align: right;
+    font-weight: 700;
+    line-height: 32px;
+  }
