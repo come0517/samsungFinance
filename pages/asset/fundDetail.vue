@@ -1,8 +1,8 @@
 <template>
   <section class="sfip">
-    <v-main class="myassets">
+    <v-main>
 
-        <div class="cont-wrap2 px-8 pb-5">
+        <div class="cont-wrap pb-5">
             <div class="acccount-detail">
                 <v-btn 
                     text
@@ -19,26 +19,32 @@
                 </div>
                 <div class="info-style mt-6">
                     <dl>
-                    <dt>투자금액</dt>
-                    <dd>999,999,999,999원</dd>
+                        <dt>투자금액</dt>
+                        <dd>999,999,999,999원</dd>
                     </dl>
                     <dl>
-                    <dt>보유수량</dt>
-                    <dd>999,999</dd>
+                        <dt>보유수량</dt>
+                        <dd>999,999</dd>
                     </dl>
                     <dl>
-                    <dt>현재가격</dt>
-                    <dd>999,999,999,999원</dd>
+                        <dt>현재가격</dt>
+                        <dd>999,999,999,999원</dd>
                     </dl>
                 </div>
-                <v-btn depressed>
-                    <strong>정기투자 신청하세요</strong>
-                    <v-icon small color="#111">mdi-chevron-right</v-icon>
-                </v-btn>
+                <div class="btn-list-style">                        
+                    <v-btn
+                        depressed
+                        width="100%"
+                        height="56px"
+                    >
+                        <strong>정기투자 신청하세요</strong>
+                        <v-icon color="#212121">mdi-chevron-right</v-icon>
+                    </v-btn>
+                </div>
             </div>
         </div>
 
-        <div class="cont-wrap2 py-6">
+        <div class="cont-wrap py-6">
             <h3>상세정보</h3>
             <div class="info-style">
                 <dl>
@@ -56,12 +62,12 @@
             </div>
         </div>
         
-        <div class="cont-wrap2 py-6">
+        <div class="cont-wrap py-6">
             <div class="d-flex justify-space-between align-center">
                 <h3>정기투자</h3>
                 <div>
-                    <v-btn depressed small>해지</v-btn>
-                    <v-btn depressed small>변경</v-btn>
+                    <v-btn depressed small color="#eee">해지</v-btn>
+                    <v-btn depressed small color="#eee">변경</v-btn>
                 </div>
             </div>
             <div class="info-style">
@@ -80,7 +86,7 @@
             </div>
         </div>
 
-        <div class="cont-wrap2 py-6">
+        <div class="cont-wrap py-6">
             <div class="d-flex justify-space-between">
                 <h3>평가등급</h3>
                 <div>
@@ -89,34 +95,29 @@
             </div>
 
             <h3 class="mt-12">자산운용보고서</h3>
-            <v-list>
+            <v-list class="list-style">
                 <v-list-item-group
                 v-model="selectedItem"
-                color="secondary"
                 :ripple="false"
                 >
-                <template v-for="(item, index) in items">
+                <template v-for="(item) in items">
                     <v-list-item :key="item.key" :ripple="false" >
                     <template >
                         <v-list-item-content :ripple="false" >
                         <v-list-item-title :ripple="false" v-text="item.text"/>
                         </v-list-item-content>
                         <v-list-item-icon>
-                        <v-icon v-text="item.icon"></v-icon>
+                        <v-icon v-text="item.icon" color="#212121"></v-icon>
                         </v-list-item-icon>
 
                     </template>
                     </v-list-item>
-                    <v-divider
-                    color=""
-                    v-if="index < items.length - 1"
-                    :key="index"/>
                 </template>
                 </v-list-item-group>
             </v-list>
         </div>
         
-        <div class="cont-wrap2">
+        <div class="cont-wrap">
             <v-list class="py-0">
                 <v-list-item-group
                 v-model="selectedItem2"
@@ -130,7 +131,7 @@
                         <v-list-item-title :ripple="false" v-text="item.text" />
                         </v-list-item-content>
                         <v-list-item-icon>
-                        <v-icon v-text="item.icon"></v-icon>
+                        <v-icon v-text="item.icon" color="#212121"></v-icon>
                         </v-list-item-icon>
 
                     </template>

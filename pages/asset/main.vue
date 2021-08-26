@@ -58,11 +58,12 @@
         </div>
 
         <div class="cont-wrap">
+            <h2 class="fs-title-3 mt-13">삼성증권 <br>평생 혜택 안내</h2>
             <v-expansion-panels
                 v-model="panel"
                 accordion
                 flat
-                class="acco-icon"
+                class="acco-icon mt-7"
             >
                 <v-expansion-panel>
                     <v-expansion-panel-header>

@@ -1,17 +1,19 @@
 <template>
   <section class="sfip">
-    <v-main class="myassets">
+    <v-main>
 
-        <div class="acccount-detail pb-12">
-            <div class="d-flex justify-space-between">
-                <div class="account-name">
-                    <h2>여행 자금 마련 계좌</h2>
-                    <p>123123123456 [종합]</p>
+        <div class="cont-wrap">
+            <div class="acccount-detail pb-12">
+                <div class="d-flex justify-space-between">
+                    <div class="account-name">
+                        <h2>여행 자금 마련 계좌</h2>
+                        <p>123123123456 [종합]</p>
+                    </div>
                 </div>
-            </div>
-            <div class="price-wrap mt-6">
-                <div class="total"><span>3,959,976</span>원</div>
-                <div class="detail"><span>999,999,999,999원</span><strong class="plus">+33.33%</strong></div>
+                <div class="price-wrap mt-6">
+                    <div class="total"><span>3,959,976</span>원</div>
+                    <div class="detail"><span>999,999,999,999원</span><strong class="plus">+33.33%</strong></div>
+                </div>
             </div>
         </div>
 
@@ -67,7 +69,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row" class="tbl-fixed">
-                                    <div class="badge"><span>이벤트 당첨금입금</span></div>
+                                    <div class="chip"><span>이벤트 당첨금입금</span></div>
                                     <p class="name">거래내역</p>
                                     <p class="date">2019-12-31</p>
                                 </th>
@@ -81,7 +83,7 @@
                             </tr>
                             <tr>
                                 <th scope="row" class="tbl-fixed">
-                                    <div class="badge"><span>대체입금</span></div>
+                                    <div class="chip"><span>대체입금</span></div>
                                     <p class="name">삼성증권 제23983회 추가 연계증권</p>
                                     <p class="date">2019-12-31</p>
                                 </th>
@@ -95,7 +97,7 @@
                             </tr>
                             <tr>
                                 <th scope="row" class="tbl-fixed">
-                                    <div class="badge type2"><span>대체입금</span></div>
+                                    <div class="chip type2"><span>대체입금</span></div>
                                     <p class="name">삼성증권 제23983회 추가 연계증권</p>
                                     <p class="date">2019-12-31</p>
                                 </th>
@@ -114,12 +116,12 @@
             </v-tab-item>
              <v-tab-item>
 
-                    <div class="no-data">
-                        <i class="ico"></i>
-                        <p class="txt2">조회된 내역이 없습니다.</p>
-                    </div>
+                <div class="no-data">
+                    <i class="ico"></i>
+                    <p class="txt2">조회된 내역이 없습니다.</p>
+                </div>
 
-                </v-tab-item>
+            </v-tab-item>
         </v-tabs-items>
 
     </v-main> 
