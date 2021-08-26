@@ -25,7 +25,7 @@
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scope>
 .agree-box {
   .v-label {
     font-size: 12px;
