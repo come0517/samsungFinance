@@ -11,14 +11,15 @@
       <v-toolbar-title v-text="`${title}`"/>
 
     </v-app-bar>
-     <v-main class="lighten-3">
+     <v-main>
       <v-container>
         <Nuxt />
       </v-container>
     </v-main>
-
   </v-app>
 </template>
+
+
 
 <script>
 export default {

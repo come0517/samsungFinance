@@ -1,5 +1,5 @@
 <template>
-  <div class="pl-8 pt-8 pb-8">
+  <div class="pl-8 pt-8">
     <span class="fs-h1" v-text="subject"/>
   </div>
 </template>

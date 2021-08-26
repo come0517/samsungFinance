@@ -2,7 +2,6 @@ export const state = () => ({
   name: '',
   navi: false,
   useCancel: false,
-  callbackCancel: () => ({})
 })
 
 

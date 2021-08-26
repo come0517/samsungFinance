@@ -34,8 +34,65 @@ $navi-height: 60px;
 $header-height: $title-height + $navi-height;
 
 
+
+// 인풋요소의 상단 마진을 정의
+// TODO: 2021.08.16 ky.cho - top 보다는 bottom margin 으로 변경이 좋을 듯함
+$form-item-marign-top: 48px;
+
+// Checkbox 그룹 요소
+$form-agree-icon-size: 24px;
+$form-agree-label-size: 13px;
+
+/*
+  Form
+*/
+
+
 // icon 기본 색상 변경 (radio / checkbox 사용)
 .theme--light.v-icon {
   color: #bbbbbb
+}
+
+
+/* form */
+.inp-wrap {
+	margin-top: $form-item-marign-top;
+}
+
+
+.agree-wrap {
+	margin-top: $form-item-marign-top;
+}
+.agree-wrap .inp-chk + .agree-box {
+	margin-top: 18px;
+}
+.agree-wrap .agree-box {
+	margin: 0 -22px;
+	padding: 25px 22px;
+	background: #fafafa;
+}
+.agree-wrap.type2 {
+	margin-top: $form-item-marign-top;
+	padding-top: 26px;
+	border-top: 1px solid #eee;
+}
+.agree-wrap.type2 .bul-dot {
+	margin-top: 16px;
+}
+
+
+.inp-radio label,
+.inp-chk label {
+	padding: 2px 0 2px 32px;
+	font-size: $form-agree-label-size;
+	line-height: 20px;
+	color: #212121;
+	font-weight: 600;
+}
+.inp-chk2 label {
+	padding: 2px 0 2px 32px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #616161;
 }
 

@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     doAction: function () {
-      this.$router.push('./step2');
+      this.$router.push('/account/nontact/step2');
     }
   }
 }

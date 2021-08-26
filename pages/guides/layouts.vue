@@ -1,6 +1,10 @@
 <template>
   <section class="sfip">
-    <h1>Layouts - 일반</h1>
+
+
+    <s-subject :subject="`@Deprecated\n해당 페이지는 Popup 가이드로 통합 되었습니다.`" class="red lighten-4"/>
+    <div class="pa-4">
+    <h1 class="mt-10">Layouts - 일반</h1>
     <v-divider class="mb-5"/>
     <nuxt-link to="/guides/layout1">일반 레이아웃 열기</nuxt-link>
 
@@ -105,12 +109,14 @@
       </v-footer>
 
     </v-bottom-sheet>
-
+    </div>
   </section>
 </template>
 
 <script>
+import SSubject from '~/components/commons/SSubject.vue'
   export default {
+  components: { SSubject },
       layout: 'sfip',
       data: () => ({
         dialog: false,

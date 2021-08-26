@@ -8,7 +8,6 @@
       elevate-on-scroll
       height=36
       extension-height="60"
-
       :page="this.page"
     >
       <div class="s-title-bar">
@@ -71,6 +70,8 @@
           </v-col>
         </v-row>
       </div>
+<!-- FIXME: 템플릿 겹치면 오류 발생....  이상함 확인 필요 -->
+
       <template #extension v-if="page.navi">
         <div class="s-title-bar">
           <v-row
@@ -141,7 +142,9 @@ export default {
       this.prominent = true;
     },
     cancel: function () {
-      this.page.callbackCancel();
+      console.log("this.page.callbackCancel", this.page.callbackCancel)
+      this.page.callbackCancel ? this.page.callbackCancel() : '';
+      //this.page.callbackCancel();
     }
   }
 }

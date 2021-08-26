@@ -1,18 +1,39 @@
+<!--
+  FIXME: 해당 페이지는 개발용 페이지로 변경 필요
+  인덱스 페이지
+  - 가이드용 템플릿 페이지
+  updated: 2021.08.25 ky.cho
+-->
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <ShadowBox
-        :data="content"
-      >
-      </ShadowBox>
-    </v-col>
-  </v-row>
+  <section>
+    <SSubject :subject="'Program List'"/>
+    <v-row >
+      <v-col>
+        <ul>
+          <li>
+            <v-btn text to="/page">페이지</v-btn>
+          </li>
+        </ul>
+      </v-col>
+    </v-row>
+
+    <v-row justify="center" align="center">
+      <v-col cols="12" sm="8" md="6">
+        <ShadowBox
+          :data="content"
+        >
+        </ShadowBox>
+      </v-col>
+    </v-row>
+  </section>
+
 </template>
 
 <script>
 
 export default {
   layout: 'app',
+  transition: 'slide-bottom',
   title: '삼성증권 가이드 페이지',
   head: () => ({
     title: '삼성증권 가이드 페이지'
