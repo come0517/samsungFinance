@@ -27,6 +27,11 @@ export default {
   //   middleware: ['auth']
   // },
 
+  styleResources: {
+    scss: [
+      '~/assets/css/reset.scss',
+    ],
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -95,7 +100,6 @@ export default {
     treeShake: true,
     customVariables: [
       '~/assets/variables.scss',
-      '~/assets/css/reset.scss',
       // '~/assets/css/common.scss',
     ],
     theme: {
