@@ -10,7 +10,9 @@ phases:
       - yarn install --frozen-lockfile
       - yarn generate --frozen-lockfile
   artifacts:
-    files: ./dist/**
+    files:
+      - ./dist/**/*
+    name: hfk-frontend-$(date +%Y-%m-%d)
 cache:
   paths:
     - '/root/.yarn-cache/**/*'
