@@ -38,6 +38,7 @@ footer {
 .fs-form {font-size:16px; line-height:24px; font-weight:500;}
 .fs-cap {font-size:12px; line-height:20px; font-weight:500; color: #888888}
 .fs-desc {font-size:9px; line-height:15px; color: #666;}
+.fs-small {font-size:11px}
 
 .v-text-field {padding-top:0; margin-top:0;}
 .v-text-field > .v-input__control > .v-input__slot > .v-text-field__slot {display:block;}
@@ -729,6 +730,7 @@ caption {position: relative; font-size: 0;}
   padding: 24px 32px;
   border-bottom: 1px solid #eee;
 }
+.list-invest .v-list-item__content { padding:0;}
 .list-invest .v-list-item__title {
   display: flex;
   justify-content: space-between;
@@ -739,8 +741,9 @@ caption {position: relative; font-size: 0;}
   color: #888;
 }
 .list-invest .v-list-item__title .chip {
-  width: 37px;
+  min-width: 37px;
   height: 20px;
+  padding: 0 8px;
   line-height: 20px;
   font-size: 11px;
   color: #FF4058;
