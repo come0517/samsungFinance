@@ -30,9 +30,12 @@
 </template>
 
 
+<style lang="scss">
+@import "~/assets/scss/monimo/index.scss";
+</style>
 
 <style lang="scss" scoped>
-@import "~/assets/css/transition.scss";
+// @import "~/assets/css/transition.scss";
 </style>
 
 

@@ -53,7 +53,7 @@ export default {
   ],
 
   css: [
-    '~/assets/scss/reset.scss',
+    '~/assets/scss/common.scss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -68,7 +68,7 @@ export default {
 
   styleResources: {
     scss: [
-      './assets/scss/*.scss',
+      './assets/scss/*/*.scss',
     ],
   },
 
@@ -103,8 +103,7 @@ export default {
   vuetify: {
     treeShake: true,
     customVariables: [
-      '~/assets/variables.scss',
-      // '~/assets/css/common.scss',
+      '~/assets/scss/custom-vuetify.scss',
     ],
     theme: {
       dark: false,

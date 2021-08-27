@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*!
+ * 모니모 (통합플랫폼) 스타일
+ *
+ * Copyright © 2021-2022 ADCAPSULE
+ */
+
+ // 비대면 계좌개설
+ @import './account/nontact/index';
+
+ // 자산
+ @import './asset/index';
+
+
+ // monimo globals variables
+$title-height: 36px;
+$title-scroll-height: 24px;
+$navi-height: 60px;
+$header-height: $title-height + $navi-height;

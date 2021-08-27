@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*!
+ * Vuetify.js Custom
+ *
+ * Appendix
+ * - Vuetify UI Guide Link: https://github.com/nuxt-community/vuetify-module#customvariables
+ *
+ * Copyright © 2021-2022 ADCAPSULE
+ */
+
+
+ // 기본 폰트 변경 - 2021.08.10 : 통합플랫폼 공통 가이드 기준으로 변경 적용 (영어/숫자: Roboto, 한글: 시스템폰트)
+$body-font-family: Roboto
+'맑은 고딕', 'malgun gothic',
+'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo',
+'Microsoft NeoGothic', 'Droid sans'
+sans-serif !default;
+
+$toolbar-content-padding-x: 24px;
+// $toolbar-content-padding-y: 0;
+
+// 확장 패널 패딩 제거
+$expansion-panel-header-padding: 0;
+$expansion-panel-content-padding: 0;
+
+ section {
+  min-height: 90vh;
+
+}

@@ -53,7 +53,7 @@ import AccountNotice from '~/components/account/AccountNotice.vue'
 
 export default {
   components: { AccountNotice },
-  layout: 'sfip',
+  layout: 'monimo',
   created: function () {
     this.$store.commit("commons/page/toggleNavi", true)
   },

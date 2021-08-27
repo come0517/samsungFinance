@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*!
+ * 공통 스타일
+ *
+ * Copyright © 2021-2022 ADCAPSULE
+ */
+
+
+ // FIXME: 파일 경로 분리로 인하여 기존 스타일 백업용 파일. 정리 후 삭제 (9/1 제거예정)
+@import './common/temp';
+
+// Font
+@import './common/font-system';
+
+// Form Control
+@import './common/form-control';
+
+
