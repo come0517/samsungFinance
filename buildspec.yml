@@ -8,6 +8,7 @@ phases:
     commands:
       - yarn config set cache-folder /root/.yarn-cache
       - yarn install --frozen-lockfile
+      - yarn generate --frozen-lockfile
   artifacts:
     files: ./dist/**
 cache:
