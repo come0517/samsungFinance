@@ -23,7 +23,7 @@ $toolbar-content-padding-x: 24px;
 $expansion-panel-header-padding: 0;
 $expansion-panel-content-padding: 0;
 
- section {
-  min-height: 90vh;
+// v-list 고정 패딩 제거
+$list-padding: 0;
 
-}
+

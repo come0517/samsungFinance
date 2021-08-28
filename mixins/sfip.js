@@ -1,5 +1,8 @@
 export default {
   transition: 'slide-bottom',
+  mounted: function () {
+    this.$nuxt.$emit('setLayoutOptions', this.options);
+  },
   created: function () {
     //console.log("mixin sfip created")
 

@@ -148,6 +148,6 @@ export default {
   },
   // FIXME: using .env
   googleAnalytics: {
-    id: 'G-C20TXT9LZS'
+    id: process.env.GA_ID
   }
 }

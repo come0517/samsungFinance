@@ -1,9 +1,9 @@
 <template>
-  <section class="sfip">
+  <section class="monimo">
     <s-subject :subject="`빠르고 쉬운 비대면계좌개설\n지금 시작해보세요!`"/>
-    <v-main class="pl-5 pr-5">
+    <v-main >
 
-      <h2 class="mb-4">주식거래 + CMA-RP유형</h2>
+      <h2 class="mt-12">주식거래 + CMA-RP유형</h2>
 
       <v-card
         color="bg"
@@ -12,9 +12,11 @@
       >
         <v-card-text>
           <v-row dense align="center">
-            <v-col cols=2><v-icon>mdi-image</v-icon></v-col>
+            <v-col cols=2>
+              <img src="/images/account/nontact/notice.png"/>
+            </v-col>
             <v-col cols=10>
-              <span class="fs-p">금융상품과 주식투자가 가능한 종합계좌와 자유 입출금 투신CMA 계좌를 한번에 개설 개설할 수 있습니다.</span>
+              <span class="banner">금융상품과 주식투자가 가능한 종합계좌와 자유 입출금 투신CMA 계좌를 한번에 개설 개설할 수 있습니다.</span>
 
             </v-col>
           </v-row>
@@ -38,15 +40,23 @@
         </li>
       </ul>
 
-
-
       <account-notice />
-      <s-btn-bottom :text="'시작!!!'" :doAction="doAction"/>
+      <SBtnBottom :text="'시작'" :doAction="doAction"/>
 
 
     </v-main>
   </section>
 </template>
+
+
+<style lang="scss" scoped>
+.banner {
+  font-size: 13px;
+  color: #616161;
+  line-height: 22px;
+  font-weight: 500;
+}
+</style>
 
 <script>
 import AccountNotice from '~/components/account/AccountNotice.vue'
@@ -54,13 +64,16 @@ import AccountNotice from '~/components/account/AccountNotice.vue'
 export default {
   components: { AccountNotice },
   layout: 'monimo',
-  created: function () {
-    this.$store.commit("commons/page/toggleNavi", true)
-  },
   data () {
     return {
-      commons: {
-        name: '계좌개설'
+      options: {
+        navi: {
+          show: true,
+          name: '계좌개설',
+        },
+        bottom: {
+          button: true,
+        }
       },
       dialog: false,
       snackbar: false,

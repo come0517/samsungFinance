@@ -1,6 +1,6 @@
 <template>
 
-  <v-card class="overflow-hidden">
+  <v-container>
     <v-app-bar
       fixed
       color="white"
@@ -8,7 +8,7 @@
       elevate-on-scroll
       height=36
       extension-height="60"
-      :page="this.page"
+      :options="options"
     >
       <div class="s-title-bar">
         <v-row
@@ -17,9 +17,11 @@
           justify="center" align="center"
         >
           <v-col class="text-left">
-            <v-btn icon small dense to="/">
+            <v-btn :ripple="false" icon small dense to="/">
               <v-icon small color="grey darken-4">mdi-close</v-icon>
             </v-btn>
+            <!--  DEV Only -->
+            <v-app-bar-nav-icon small @click="toggleMenu"/>
           </v-col>
           <v-col class="text-center">
             <span class="fs-h3">삼성증권</span>
@@ -70,9 +72,8 @@
           </v-col>
         </v-row>
       </div>
-<!-- FIXME: 템플릿 겹치면 오류 발생....  이상함 확인 필요 -->
 
-      <template #extension v-if="page.navi">
+      <template #extension v-if="options.show">
         <div class="s-title-bar">
           <v-row
             no-gutters
@@ -80,32 +81,34 @@
             justify="center" align="center"
           >
             <v-col cols=10 class="text-left" justify="center">
-              <v-icon
+              <div>
+                <img class="float-left" src="/images/commons/left.png" width="24" height="24" alt="back"/>
+                <span class="navi-title float-left">{{ options.name }}</span>
+              </div>
+              <!-- <v-icon
                 color="black"
                 large
                 :ripple="false"
                 @click="goBack()"
-              >mdi-chevron-left</v-icon>
+              >{{ svgLeft }}</v-icon> -->
 
-              <span class="fs-form">{{ page.name }}</span>
+
             </v-col>
             <v-col cols=2>
               <v-btn
                 text
                 dence
-                v-if="page.useCancel" @click="cancel">취소</v-btn>
+                v-if="options.useCancel" @click="options.callbackCancel">취소</v-btn>
             </v-col>
           </v-row>
         </div>
 
       </template>
+
+
     </v-app-bar>
-
-    <div style="min-height: 90hv;">
-     <slot/>
-    </div>
-
-  </v-card>
+    <dev-menu :menu="menu" @close="toggleMenu"/>
+  </v-container>
 </template>
 
 <style lang="scss" scoped>
@@ -122,29 +125,43 @@ div.v-toolbar__content {
 div.s-title-bar {
   width: 100%;
 }
-
+.navi-title {
+  padding-left: 5px;
+  font-size: 16px;
+  color: #212121;
+  line-height: 28px;
+  font-weight: 500;
+}
 
 </style>
 
 <script>
 
+import DevMenu from './dev/DevMenu.vue';
 
 export default {
-  computed: {
-    page() {
-      return this.$store.state.commons.page;
-    },
-
-
+  props: {
+    navi: Object,
   },
+  components: { DevMenu },
+  computed: {
+    options() {
+      console.log('this.navi', this.navi)
+      return Object.assign({
+        show: false
+      }, this.navi)
+    },
+  },
+  data: () => ({
+    menu: false,
+  }),
   methods: {
     scrolled: function () {
       this.prominent = true;
     },
-    cancel: function () {
-      console.log("this.page.callbackCancel", this.page.callbackCancel)
-      this.page.callbackCancel ? this.page.callbackCancel() : '';
-      //this.page.callbackCancel();
+    toggleMenu(toggle) {
+      // console.log('toggleMenu', toggle, this.menu)
+      this.menu = !this.menu;
     }
   }
 }

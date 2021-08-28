@@ -17,3 +17,11 @@ $title-height: 36px;
 $title-scroll-height: 24px;
 $navi-height: 60px;
 $header-height: $title-height + $navi-height;
+
+$content-min-height: 95hv;
+
+$content-padding: 0 32px 0 32px;
+
+section {
+  padding: $content-padding;
+};

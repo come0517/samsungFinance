@@ -1,89 +1,87 @@
 <template>
-  <section class="sfip">
+  <section class="monimo">
     <s-subject :subject="`새로운 투자를 위한\n본인확인을 시작합니다.`"/>
-    <v-main class="pl-5 pr-5">
+    <div class="inp-wrap">
+      <v-text-field
+        :rules="rules.name.ko"
+        label="성명(국문)"
+        max="15"
+        placeholder="한글 최대 15자 입력"
+        persistent-placeholder
+        clearable
+      />
+    </div>
+    <div class="inp-wrap">
+      <v-text-field
+        :rules="rules.name.en"
+        label="성명(영문) *선택"
+        placeholder="성명(영문)을 입력해주세요."
+        persistent-placeholder
+        clearable
+      />
+    </div>
 
-      <div class="inp-wrap">
-        <v-text-field
-          :rules="rules.name.ko"
-          label="성명(국문)"
-          max="15"
-          placeholder="한글 최대 15자 입력"
-          persistent-placeholder
-          clearable
-        />
-      </div>
-      <div class="inp-wrap">
-        <v-text-field
-          :rules="rules.name.en"
-          label="성명(영문) *선택"
-          placeholder="성명(영문)을 입력해주세요."
-          persistent-placeholder
-          clearable
-        />
-      </div>
-
-      <div class="inp-wrap">
-        <v-text-field
-          type="number"
-          :counter=13
-          :rules="rules.personNo"
-          label="주민등록번호"
-          placeholder="‘-’ 없이 13자리 입력"
-          persistent-placeholder
-          clearable
-        />
-      </div>
+    <div class="inp-wrap">
+      <v-text-field
+        type="number"
+        :counter=13
+        :rules="rules.personNo"
+        label="주민등록번호"
+        placeholder="‘-’ 없이 13자리 입력"
+        persistent-placeholder
+        clearable
+      />
+    </div>
 
 
-      <div class="inp-wrap">
-        <v-select
-          v-model="mobile"
-          :items="mobileOpt"
-          label="통신사"
-          :multiple="false"
-          append-icon="mdi-chevron-down"
-        ></v-select>
-      </div>
+    <div class="inp-wrap">
+      <v-select
+        v-model="mobile"
+        :items="mobileOpt"
+        label="통신사"
+        :multiple="false"
+        append-icon="mdi-chevron-down"
+      ></v-select>
+    </div>
 
-      <SGroupCheckbox :group="agree.group" :items="agree.items" />
+    <SGroupCheckbox :group="agree.group" :items="agree.items" />
 
 
 
-      <div class="inp-wrap">
-        <mobile-auth />
+    <div class="inp-wrap">
+      <mobile-auth />
 
-      </div>
+    </div>
 
 <!--
-      <div class="inp-wrap">
-          <label for="tel01" class="inp-label">휴대폰번호</label>
-          <div class="inp-box">
-              <input type="text" id="tel01" class="inp" placeholder="‘-’ 없이 입력">
-              <button type="button" class="inp-btn">인증번호 요청</button>
-          </div>
-      </div>
+    <div class="inp-wrap">
+        <label for="tel01" class="inp-label">휴대폰번호</label>
+        <div class="inp-box">
+            <input type="text" id="tel01" class="inp" placeholder="‘-’ 없이 입력">
+            <button type="button" class="inp-btn">인증번호 요청</button>
+        </div>
+    </div>
 
-      <div class="inp-wrap miss">
-          <label for="confirmNum" class="inp-label">인증번호</label>
-          <div class="inp-box">
-              <input type="text" id="confirmNum" class="inp" placeholder="인증번호 6자리 입력">
-              <button type="button" class="inp-btn">인증확인</button>
-          </div>
-          <div class="inp-bottom">
-              <p class="message">인증번호가 일치하지 않습니다.</p>
-              <div class="inp-time">
-                  <span class="txt-time">02:57</span>
-                  <button type="button" class="btn-txt">연장하기</button>
-              </div>
-          </div>
-      </div>
+    <div class="inp-wrap miss">
+        <label for="confirmNum" class="inp-label">인증번호</label>
+        <div class="inp-box">
+            <input type="text" id="confirmNum" class="inp" placeholder="인증번호 6자리 입력">
+            <button type="button" class="inp-btn">인증확인</button>
+        </div>
+        <div class="inp-bottom">
+            <p class="message">인증번호가 일치하지 않습니다.</p>
+            <div class="inp-time">
+                <span class="txt-time">02:57</span>
+                <button type="button" class="btn-txt">연장하기</button>
+            </div>
+        </div>
+    </div>
 
 -->
 
-      <account-notice />
-      <s-btn-bottom :text="'다음'" :doAction="doAction"/>
-    </v-main>
+    <account-notice />
+    <s-btn-bottom :text="'다음'" :doAction="doAction"/>
+
   </section>
 </template>
 
@@ -96,7 +94,7 @@ import MobileAuth from '~/components/account/MobileAuth.vue'
 
 export default {
   components: { AccountNotice, MobileAuth },
-  layout: 'sfip',
+  layout: 'monimo',
   created: function () {
     this.$store.commit("commons/page/toggleNavi", true)
   },
@@ -108,8 +106,17 @@ export default {
   },
   data () {
     return {
-      commons: {
-        name: '계좌개설'
+      options: {
+        navi: {
+          show: true,
+          name: '계좌개설',
+          useCancel: true,
+          callbackCancel: this.cancel,
+
+        },
+        bottom: {
+          button: true,
+        }
       },
       agree: {
         group: {
@@ -144,8 +151,13 @@ export default {
   },
   methods: {
     doAction: function () {
-      this.$router.push('./step3');
+      if (confirm ('FIXME: 검증처리 결과에 따라 이동 여부 설정 필요. 설계서 검토')) {
+        this.$router.push('./step3');
+      }
     },
+    cancel: function () {
+      this.$router.push('./step1');
+    }
 
   }
 }

@@ -5,80 +5,8 @@
   updated: 2021.08.25 ky.cho
 -->
 <template>
-  <section>
-    <v-row justify="center" align="center">
-      <v-col cols="12" sm="8" md="6">
-        <ShadowBox
-          :data="content"
-        >
-        </ShadowBox>
-      </v-col>
-    </v-row>
-
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
-
-      <v-list dense>
-        <v-list-item-group
-          multiple
-        >
-          <template v-for="(item, i) in content.pubs">
-            <v-card
-              class="mx-auto"
-
-              color="#1f7087"
-              :key="`divider-${i}`"
-              dark
-              tile
-            >
-              <v-card-text>
-                {{ item.version }}
-              </v-card-text>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title dark class="mb-1">
-                    {{ item.name }}
-                  </v-list-item-title>
-                  <v-list-item-subtitle>{{ item.desc }}</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-card>
-
-
-            <div :key="`wrapper-${i}`" v-if="item.children">
-              <v-list-item
-                v-for="menu in item.children"
-                :key="menu.id"
-                active-class="deep-purple--text text--accent-4"
-                :to="menu.id"
-              >
-
-                <v-list-item-content>
-                  <v-list-item-title :class="$route.path === menu.id ? 'text-overline' : 'text-caption'" v-text="menu.name"></v-list-item-title>
-                </v-list-item-content>
-
-              </v-list-item>
-            </div>
-          </template>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-btn
-      color="pink"
-      dark
-      x-large
-      block
-      tile
-      padless
-      @click.stop="drawer = !drawer"
-    >
-      Publishing Lists
-    </v-btn>
-
+  <section class="pt-10">
+    <SSubject :subject="`개발자용 가이드 페이지 입니다.\n상단의 메뉴를 열어주세요.`"/>
   </section>
 
 </template>
@@ -86,7 +14,7 @@
 <script>
 
 export default {
-  layout: 'app',
+  layout: 'monimo',
   transition: 'slide-bottom',
   title: '삼성증권 가이드 페이지',
   head: () => ({
@@ -113,6 +41,20 @@ export default {
         // {icon: 'mdi-keyboard', title: 'Keypad', to: '/guides/Keypad'},
       ],
       pubs: [
+        {
+          id: '/guide',
+          name: '공통가이드',
+          version: '00. 공통_guide_html_210806',
+          children: [
+            {icon: 'mdi-palette', name: 'Colors', id: '/guides/colors'},
+            {icon: 'mdi-menu', name: 'Tops', id: '/guides/tops'},
+            {icon: 'mdi-format-text', name: 'Fonts', id: '/guides/fonts'},
+            {icon: 'mdi-page-layout-body', name: 'Layouts', id: '/guides/layouts'},
+            {icon: 'mdi-gesture-tap-button', name: 'Buttons', id: '/guides/boxes'},
+            {icon: 'mdi-form-textbox-lock', name: 'Form', id: '/guides/forms'},
+            {icon: 'mdi-list-status', name: 'Lists', id: '/guides/lists'},
+          ],
+        },
         {
           id: '/account/nontact',
           name: '비대면계좌개설',
